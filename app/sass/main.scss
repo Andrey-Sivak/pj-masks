@@ -1,0 +1,19 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/reset";
+@import "base/typography";
+@import "base/base";
+
+@import "includes/header";
+@import "includes/footer";
+
+@import "components/loader";
+
+body,
+html {
+  position: relative;
+  overflow-x: hidden;
+  //font-family: 'Museo Sans', sans-serif;
+}
