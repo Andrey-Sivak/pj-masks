@@ -1,9 +1,20 @@
-/*@font-face {
-  font-family: 'Museo Sans';
-  src: url('../../fonts/MuseoSansCyrl-300.eot');
-  src: url('../../fonts/MuseoSansCyrl-300.eot?#iefix') format('embedded-opentype'),
-  url('../../fonts/MuseoSansCyrl-300.woff') format('woff'),
-  url('../../fonts/MuseoSansCyrl-300.ttf') format('truetype');
-  font-weight: 300;
+@font-face{
+  font-family: 'Marvin';
+  src: url("../../fonts/Marvin.otf");
+  font-weight: normal;
   font-style: normal;
-}*/
+}
+
+@font-face{
+  font-family: 'Montserrat';
+  src: url("../../fonts/Montserrat-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'Montserrat';
+  src: url("../../fonts/Montserrat-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}

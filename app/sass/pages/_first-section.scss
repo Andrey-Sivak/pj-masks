@@ -1,0 +1,98 @@
+.first-section {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../../img/first-sec-bg.png');
+  background-color: #fff;
+  overflow: hidden;
+
+  &__wrap {
+    position: relative;
+    padding-bottom: 57px;
+  }
+
+  &__logo-text-img {
+    margin-bottom: 25px;
+    height: auto;
+    margin-left: 17px;
+  }
+
+  .qr {
+    display: flex;
+    align-items: flex-start;
+
+    &__img {
+      position: relative;
+      margin-right: 42px;
+
+      &_wrap {
+        z-index: 1;
+        position: relative;
+
+        &:before {
+          content: '';
+          position: absolute;
+          background-color: #fff;
+          width: 148px;
+          height: 148px;
+          z-index: 0;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        img {
+          display: block;
+          position: relative;
+          z-index: 1;
+        }
+      }
+
+      &_text {
+        margin-top: 27px;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        color: #fff;
+      }
+    }
+
+    &__text {
+      max-width: 336px;
+      color: #fff;
+
+      &_date {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 5px;
+      }
+
+      &_text {
+        font-size: 19px;
+        line-height: 26px;
+      }
+    }
+  }
+
+  &__main-img {
+    position: absolute;
+    bottom: -2px;
+    right: -29px;
+
+    &_img {
+      position: relative;
+      z-index: 2;
+    }
+
+    &_overlay {
+      position: absolute;
+      z-index: 1;
+      left: -149px;
+      bottom: -22px;
+      mix-blend-mode: screen;
+      filter: blur(20px);
+    }
+  }
+}

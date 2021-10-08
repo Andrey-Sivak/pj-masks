@@ -1,0 +1,29 @@
+.footer {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../img/footer-bg.png');
+  padding: 45px 0;
+
+  &__wrap {
+    margin: 0 auto;
+    max-width: 1246px;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(#fff, .6);
+    margin-top: 35px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  &__link {
+    color: $yellow;
+    font-size: 14px;
+    line-height: 19px;
+  }
+}

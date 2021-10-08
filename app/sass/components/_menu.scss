@@ -1,19 +1,14 @@
-.header {
-  display: flex;
+.menu {
+  max-width: 780px;
   width: 100%;
-  justify-content: space-between;
-  align-items: center;
 
   &__wrap {
-    width: 100%;
-    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
-  &__logo {
-    transform: translateY(12px);
-  }
-
-  &__sign {
+  &__item {
     display: flex;
     align-items: center;
 
@@ -23,7 +18,7 @@
         fill: $green;
       }
 
-      .header__sign_text {
+      .menu__item_link {
         color: $green;
       }
     }
@@ -34,14 +29,21 @@
         fill: $green;
       }
 
-      &_text {
+      .menu__item_link {
         color: $green;
       }
     }
 
-    &_text {
-      display: block;
+    &_link {
       margin-left: 7px;
+      padding: 26px 0 24px;
+      font-size: 15px;
+      line-height: 21px;
+      color: $dark-blue;
     }
+  }
+
+  &__decor {
+    fill: $dark-blue;
   }
 }
