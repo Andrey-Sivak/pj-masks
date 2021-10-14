@@ -1,0 +1,110 @@
+.third-section {
+  padding-top: 53px;
+  padding-bottom: 62px;
+  background-size: cover;
+  background-position: center;
+  background-image: url('../../img/green_bg.png');
+
+  &__caption {
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 60px;
+    line-height: 82px;
+    margin-bottom: 55px;
+  }
+
+  &__wrap {
+    max-width: 1252px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__item {
+    height: 651px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-repeat: no-repeat;
+
+    &.first {
+      background-image: url('../../img/prizes1.png');
+      background-size: 391px;
+      background-position: center 46px;
+      flex: 0 0 428px;
+
+      .third-section__item_note {
+        background-image: url('../../img/prizes1-text-bg.png');
+        padding: 76px 28px 32px 32px;
+        width: 390px;
+        margin: 0 auto;
+      }
+    }
+
+    &.second {
+      background-image: url('../../img/prizes2.png');
+      background-size: 310px;
+      background-position: center 120px;
+      flex: 0 0 475px;
+      margin: 0 -25px;
+
+      .third-section__item_note {
+        font-size: 28px;
+        line-height: 38px;
+        background-image: url('../../img/prizes2-text-bg.png');
+        padding: 92px 44px 77px 54px;
+        width: 367px;
+        margin: 0 auto;
+      }
+    }
+
+    &.third {
+      background-image: url('../../img/prizes3.png');
+      background-size: 328px;
+      background-position: center 146px;
+      flex: 0 0 397px;
+
+      .third-section__item_note {
+        background-image: url('../../img/prizes3-text-bg.png');
+        padding: 76px 28px 32px 32px;
+        width: 390px;
+        margin: 0 auto;
+      }
+    }
+
+    &_caption {
+      font-size: 24px;
+      line-height: 33px;
+      text-align: center;
+      margin-bottom: 5px;
+      color: #ffffff;
+    }
+
+    &_text {
+      color: #fff;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    &_note {
+      font-size: 18px;
+      line-height: 23px;
+      text-align: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      span {
+        display: block;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        line-height: 22px;
+      }
+    }
+  }
+}

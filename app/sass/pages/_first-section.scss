@@ -5,6 +5,8 @@
   background-image: url('../../img/first-sec-bg.png');
   background-color: #fff;
   overflow: hidden;
+  position: relative;
+  z-index: 1;
 
   &__wrap {
     position: relative;
@@ -33,12 +35,12 @@
           content: '';
           position: absolute;
           background-color: #fff;
-          width: 148px;
-          height: 148px;
+          width: 150px;
+          height: 160px;
           z-index: 0;
           left: 50%;
           top: 50%;
-          transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%) skewY(-5deg);
         }
 
         img {
