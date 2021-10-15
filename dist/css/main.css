@@ -804,6 +804,160 @@ input[type="number"] {
               flex: 0 0 auto;
       max-width: 234px; }
 
+.five-section {
+  padding-top: 58px;
+  padding-bottom: 144px;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/five-sec-main-bg.png"); }
+  .five-section__caption {
+    color: #1C0C44;
+    margin-bottom: 80px;
+    font-size: 60px;
+    line-height: 82px;
+    text-align: center; }
+  .five-section__wrap {
+    max-width: 1318px;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 80px 160px 74px 100px;
+    margin: 0 auto;
+    background-image: url("../img/five-sec-bg.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat; }
+
+.toys {
+  background-image: url("../img/toys-bg.png");
+  background-size: cover;
+  background-position: center top;
+  padding-bottom: 22px;
+  padding-top: 81px; }
+  .toys__page-caption {
+    font-size: 36px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 100px; }
+  .toys__wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    max-width: 1062px;
+    width: 100%;
+    margin: 0 auto; }
+  .toys .toy {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 320px;
+        -ms-flex: 0 0 320px;
+            flex: 0 0 320px;
+    position: relative;
+    margin-bottom: 60px;
+    height: 430px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    /*&.active {
+      height: auto;
+      justify-content: flex-start;
+
+      .toy__text {
+        max-height: unset;
+        min-height: unset;
+        overflow-y: unset;
+
+        &.more {
+          mask-image: unset;
+        }
+      }
+    }*/ }
+    .toys .toy__img {
+      z-index: 2;
+      position: relative;
+      display: block;
+      margin: 0 auto; }
+    .toys .toy__title {
+      font-size: 20px;
+      line-height: 27px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #1C0C44;
+      position: relative;
+      z-index: 1;
+      padding-bottom: 10px; }
+      .toys .toy__title:before {
+        position: absolute;
+        content: '';
+        width: 335px;
+        height: 168px;
+        background-image: url("../img/toy-yellow-bg.png");
+        background-position: center;
+        background-size: contain;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+        z-index: -1;
+        bottom: 0; }
+    .toys .toy__text {
+      margin-top: 6px;
+      font-family: 'Montserrat', sans-serif;
+      color: #ffffff;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      max-height: 140px;
+      min-height: 140px;
+      overflow-y: hidden;
+      position: relative; }
+      .toys .toy__text.more {
+        -webkit-mask-image: -webkit-linear-gradient(black 15%, transparent);
+                mask-image: linear-gradient(black 15%, transparent); }
+    .toys .toy__more {
+      font-family: 'Marvin', sans-serif;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      font-size: 16px;
+      line-height: 22px;
+      text-transform: uppercase;
+      color: #FFD733;
+      z-index: 10; }
+
 body,
 html {
   position: relative;

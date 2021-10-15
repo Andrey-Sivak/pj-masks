@@ -1,0 +1,115 @@
+@import "five-section";
+
+.toys {
+
+  background-image: url('../../img/toys-bg.png');
+  background-size: cover;
+  background-position: center top;
+  padding-bottom: 22px;
+  padding-top: 81px;
+
+  &__page-caption {
+    font-size: 36px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 100px;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1062px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .toy {
+    flex: 0 0 320px;
+    position: relative;
+    margin-bottom: 60px;
+    height: 430px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    /*&.active {
+      height: auto;
+      justify-content: flex-start;
+
+      .toy__text {
+        max-height: unset;
+        min-height: unset;
+        overflow-y: unset;
+
+        &.more {
+          mask-image: unset;
+        }
+      }
+    }*/
+
+    &__img {
+      z-index: 2;
+      position: relative;
+      display: block;
+      margin: 0 auto;
+    }
+
+    &__title {
+      font-size: 20px;
+      line-height: 27px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $dark-blue;
+      position: relative;
+      z-index: 1;
+      padding-bottom: 10px;
+
+      &:before {
+        position: absolute;
+        content: '';
+        width: 335px;
+        height: 168px;
+        background-image: url('../../img/toy-yellow-bg.png');
+        background-position: center;
+        background-size: contain;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        bottom: 0;
+      }
+    }
+
+    &__text {
+      margin-top: 6px;
+      font-family: 'Montserrat', sans-serif;
+      color: #ffffff;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      max-height: 140px;
+      min-height: 140px;
+      overflow-y: hidden;
+      position: relative;
+
+      &.more {
+        mask-image: linear-gradient(black 15%, transparent);
+      }
+    }
+
+    &__more {
+      font-family: 'Marvin', sans-serif;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      font-size: 16px;
+      line-height: 22px;
+      text-transform: uppercase;
+      color: $yellow;
+      z-index: 10;
+    }
+  }
+}
