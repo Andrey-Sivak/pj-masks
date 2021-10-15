@@ -117,11 +117,17 @@ input[type="number"] {
     text-align: center; }
   .footer__text {
     font-weight: 500;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 14px;
+    line-height: 17px;
     color: rgba(255, 255, 255, 0.6);
     margin-top: 35px;
     font-family: 'Montserrat', sans-serif; }
+    .footer__text a {
+      text-decoration: underline;
+      color: #FFD733;
+      opacity: .6; }
+      .footer__text a:hover, .footer__text a:active, .footer__text a:focus {
+        text-decoration: none; }
   .footer__link {
     color: #FFD733;
     font-size: 14px;
@@ -244,9 +250,9 @@ input[type="number"] {
           z-index: 0;
           left: 50%;
           top: 50%;
-          -webkit-transform: translate(-50%, -50%) skewY(-5deg);
-              -ms-transform: translate(-50%, -50%) skewY(-5deg);
-                  transform: translate(-50%, -50%) skewY(-5deg); }
+          -webkit-transform: translate(-50%, -50%) skewY(-3deg);
+              -ms-transform: translate(-50%, -50%) skewY(-3deg);
+                  transform: translate(-50%, -50%) skewY(-3deg); }
         .home .first-section .qr__img_wrap img {
           display: block;
           position: relative;
@@ -467,49 +473,69 @@ input[type="number"] {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    background-repeat: no-repeat; }
-    .home .third-section__item.first {
-      background-image: url("../img/prizes1.png");
-      background-size: 391px;
-      background-position: center 46px;
-      -webkit-box-flex: 0;
-      -webkit-flex: 0 0 428px;
-          -ms-flex: 0 0 428px;
-              flex: 0 0 428px; }
-      .home .third-section__item.first .third-section__item_note {
-        background-image: url("../img/prizes1-text-bg.png");
-        padding: 76px 28px 32px 32px;
-        width: 390px;
-        margin: 0 auto; }
-    .home .third-section__item.second {
-      background-image: url("../img/prizes2.png");
-      background-size: 310px;
-      background-position: center 120px;
-      -webkit-box-flex: 0;
-      -webkit-flex: 0 0 475px;
-          -ms-flex: 0 0 475px;
-              flex: 0 0 475px;
-      margin: 0 -25px; }
-      .home .third-section__item.second .third-section__item_note {
-        font-size: 28px;
-        line-height: 38px;
-        background-image: url("../img/prizes2-text-bg.png");
-        padding: 92px 44px 77px 54px;
-        width: 367px;
-        margin: 0 auto; }
-    .home .third-section__item.third {
-      background-image: url("../img/prizes3.png");
-      background-size: 328px;
-      background-position: center 146px;
-      -webkit-box-flex: 0;
-      -webkit-flex: 0 0 397px;
-          -ms-flex: 0 0 397px;
-              flex: 0 0 397px; }
-      .home .third-section__item.third .third-section__item_note {
-        background-image: url("../img/prizes3-text-bg.png");
-        padding: 76px 28px 32px 32px;
-        width: 390px;
-        margin: 0 auto; }
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1; }
+    .home .third-section__item_wrap {
+      position: relative; }
+      .home .third-section__item_wrap:before {
+        position: absolute;
+        z-index: 0;
+        width: 391px;
+        height: 382px;
+        content: '';
+        background-image: url("../img/light-pizes.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: 46px;
+        mix-blend-mode: screen; }
+      .home .third-section__item_wrap.first {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 428px;
+            -ms-flex: 0 0 428px;
+                flex: 0 0 428px; }
+        .home .third-section__item_wrap.first .third-section__item {
+          background-image: url("../img/prizes1.png");
+          background-size: 391px;
+          background-position: center 46px; }
+          .home .third-section__item_wrap.first .third-section__item .third-section__item_note {
+            background-image: url("../img/prizes1-text-bg.png");
+            padding: 76px 28px 32px 32px;
+            width: 390px;
+            margin: 0 auto; }
+      .home .third-section__item_wrap.second {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 475px;
+            -ms-flex: 0 0 475px;
+                flex: 0 0 475px;
+        margin: 0 -25px; }
+        .home .third-section__item_wrap.second:before {
+          top: 56px; }
+        .home .third-section__item_wrap.second .third-section__item {
+          background-image: url("../img/prizes2.png");
+          background-size: 310px;
+          background-position: center 120px; }
+          .home .third-section__item_wrap.second .third-section__item .third-section__item_note {
+            font-size: 28px;
+            line-height: 38px;
+            background-image: url("../img/prizes2-text-bg.png");
+            padding: 92px 44px 77px 54px;
+            width: 367px;
+            margin: 0 auto; }
+      .home .third-section__item_wrap.third {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 397px;
+            -ms-flex: 0 0 397px;
+                flex: 0 0 397px; }
+        .home .third-section__item_wrap.third .third-section__item {
+          background-image: url("../img/prizes3.png");
+          background-size: 328px;
+          background-position: center 146px; }
+          .home .third-section__item_wrap.third .third-section__item .third-section__item_note {
+            background-image: url("../img/prizes3-text-bg.png");
+            padding: 76px 28px 32px 32px;
+            width: 390px;
+            margin: 0 auto; }
     .home .third-section__item_caption {
       font-size: 24px;
       line-height: 33px;

@@ -14,11 +14,21 @@
 
   &__text {
     font-weight: 500;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 14px;
+    line-height: 17px;
     color: rgba(#fff, .6);
     margin-top: 35px;
     font-family: 'Montserrat', sans-serif;
+
+    a {
+      text-decoration: underline;
+      color: $yellow;
+      opacity: .6;
+
+      @include on-event {
+        text-decoration: none;
+      }
+    }
   }
 
   &__link {
