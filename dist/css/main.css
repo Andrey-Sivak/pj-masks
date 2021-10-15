@@ -286,10 +286,34 @@ input[type="number"] {
       position: absolute;
       z-index: 1;
       left: -149px;
-      bottom: -22px;
+      bottom: -691px;
       mix-blend-mode: screen;
       -webkit-filter: blur(20px);
-              filter: blur(20px); }
+              filter: blur(20px);
+      -webkit-animation-timing-function: linear;
+              animation-timing-function: linear;
+      -webkit-animation-name: overlayRotate;
+              animation-name: overlayRotate;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+      -webkit-animation-duration: 5s;
+              animation-duration: 5s; }
+
+@-webkit-keyframes overlayRotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes overlayRotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
 
 .home .second-section {
   background-image: url("../img/footer-bg.png");
@@ -419,7 +443,7 @@ input[type="number"] {
       font-size: 30px;
       line-height: 41px;
       letter-spacing: 0.04em;
-      margin-top: -5px;
+      margin-top: -11px;
       color: #1C0C44; }
     .home .second-section__item_text {
       position: relative;
@@ -595,6 +619,190 @@ input[type="number"] {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat; }
+
+.winners {
+  background-position: center;
+  background-image: url("../img/winners-bg.png");
+  background-size: cover;
+  padding-top: 81px;
+  padding-bottom: 67px; }
+  .winners__page-caption {
+    color: #1C0C44;
+    font-size: 36px;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 28px; }
+  .winners__search {
+    width: 303px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 46px;
+    margin: 0 auto; }
+    .winners__search_label {
+      padding-top: 14px;
+      height: 100%;
+      display: block;
+      position: relative;
+      z-index: 0; }
+      .winners__search_label:before {
+        position: absolute;
+        z-index: 0;
+        background-color: #fff;
+        top: 0;
+        left: -20px;
+        bottom: 0;
+        right: 0;
+        content: '';
+        -webkit-transform: skewX(10deg);
+            -ms-transform: skewX(10deg);
+                transform: skewX(10deg);
+        display: block;
+        border: 1px solid #80858A;
+        box-sizing: border-box; }
+    .winners__search_input {
+      text-align: center;
+      font-size: 18px;
+      line-height: 22px;
+      color: #1C0C44;
+      background-color: transparent;
+      position: relative;
+      z-index: 1; }
+      .winners__search_input::-webkit-input-placeholder {
+        text-align: center;
+        color: #8E8E8E;
+        font-size: 18px;
+        line-height: 22px; }
+      .winners__search_input::-moz-placeholder {
+        text-align: center;
+        color: #8E8E8E;
+        font-size: 18px;
+        line-height: 22px; }
+      .winners__search_input:-ms-input-placeholder {
+        text-align: center;
+        color: #8E8E8E;
+        font-size: 18px;
+        line-height: 22px; }
+      .winners__search_input::-ms-input-placeholder {
+        text-align: center;
+        color: #8E8E8E;
+        font-size: 18px;
+        line-height: 22px; }
+      .winners__search_input::placeholder {
+        text-align: center;
+        color: #8E8E8E;
+        font-size: 18px;
+        line-height: 22px; }
+    .winners__search_btn {
+      background-color: transparent;
+      position: relative;
+      cursor: pointer;
+      max-width: 56px;
+      min-width: 56px;
+      border: none;
+      display: block;
+      z-index: 1; }
+      .winners__search_btn:before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        content: '';
+        background-color: #1C0C44;
+        -webkit-transform: skewX(-10deg);
+            -ms-transform: skewX(-10deg);
+                transform: skewX(-10deg);
+        z-index: 0; }
+      .winners__search_btn img {
+        position: relative;
+        z-index: 1; }
+  .winners__table {
+    padding-top: 10px;
+    max-width: 657px;
+    width: 100%;
+    margin: 35px auto 0;
+    max-height: 710px;
+    overflow-y: scroll; }
+    .winners__table::-webkit-scrollbar {
+      width: 6px;
+      padding: 2px; }
+    .winners__table::-webkit-scrollbar-track {
+      background-color: #FFD733;
+      border-radius: 20px; }
+    .winners__table::-webkit-scrollbar-thumb {
+      background-color: #1C0C44;
+      border-radius: 20px;
+      border: 2px solid #1C0C44; }
+    .winners__table_wrap {
+      padding-right: 45px; }
+    .winners__table_row {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-bottom: 24px; }
+    .winners__table_date {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 87px;
+          -ms-flex: 0 0 87px;
+              flex: 0 0 87px;
+      margin-right: 10px;
+      color: #80858A;
+      font-size: 14px;
+      line-height: 17px;
+      font-family: 'Montserrat', sans-serif; }
+    .winners__table_email {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 170px;
+          -ms-flex: 0 0 170px;
+              flex: 0 0 170px;
+      overflow: hidden;
+      margin-right: 3px;
+      color: #1C0C44;
+      font-size: 16px;
+      line-height: 20px;
+      font-family: 'Montserrat', sans-serif;
+      text-overflow: ellipsis; }
+    .winners__table_img {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 60px;
+          -ms-flex: 0 0 60px;
+              flex: 0 0 60px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      position: relative;
+      background-color: #FFD733;
+      margin-right: 48px; }
+      .winners__table_img img {
+        position: absolute;
+        display: block;
+        max-width: 78px;
+        max-height: 78px;
+        width: auto;
+        height: auto;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); }
+    .winners__table_title {
+      color: #1C0C44;
+      font-size: 15px;
+      line-height: 21px;
+      text-transform: uppercase;
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 auto;
+          -ms-flex: 0 0 auto;
+              flex: 0 0 auto;
+      max-width: 234px; }
 
 body,
 html {

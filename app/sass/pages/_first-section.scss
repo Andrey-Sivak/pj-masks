@@ -92,9 +92,23 @@
       position: absolute;
       z-index: 1;
       left: -149px;
-      bottom: -22px;
+      bottom: -691px;
       mix-blend-mode: screen;
       filter: blur(20px);
+      animation-timing-function: linear;
+      animation-name: overlayRotate;
+      animation-iteration-count: infinite;
+      animation-duration: 5s;
     }
+  }
+}
+
+@keyframes overlayRotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
   }
 }
