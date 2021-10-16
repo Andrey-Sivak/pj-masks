@@ -1028,12 +1028,21 @@ input[type="number"] {
   background-size: cover;
   padding-top: 81px;
   padding-bottom: 67px; }
+  @media (max-width: 767px) {
+    .winners {
+      padding-top: 54px;
+      padding-right: 4px;
+      padding-left: 15px; } }
   .winners__page-caption {
     color: #1C0C44;
     font-size: 36px;
     line-height: 50px;
     text-align: center;
     margin-bottom: 28px; }
+    @media (max-width: 767px) {
+      .winners__page-caption {
+        font-size: 36px;
+        line-height: 50px; } }
   .winners__search {
     width: 303px;
     display: -webkit-box;
@@ -1149,7 +1158,8 @@ input[type="number"] {
       -webkit-align-items: center;
           -ms-flex-align: center;
               align-items: center;
-      margin-bottom: 24px; }
+      margin-bottom: 24px;
+      position: relative; }
     .winners__table_date {
       -webkit-box-flex: 0;
       -webkit-flex: 0 0 87px;
@@ -1160,6 +1170,11 @@ input[type="number"] {
       font-size: 14px;
       line-height: 17px;
       font-family: 'Montserrat', sans-serif; }
+      @media (max-width: 767px) {
+        .winners__table_date {
+          position: absolute;
+          left: 0;
+          top: 9px; } }
     .winners__table_email {
       -webkit-box-flex: 0;
       -webkit-flex: 0 0 170px;
@@ -1172,6 +1187,16 @@ input[type="number"] {
       line-height: 20px;
       font-family: 'Montserrat', sans-serif;
       text-overflow: ellipsis; }
+      @media (max-width: 767px) {
+        .winners__table_email {
+          -webkit-transform: translateY(9px);
+              -ms-transform: translateY(9px);
+                  transform: translateY(9px);
+          -webkit-box-flex: 0;
+          -webkit-flex: 0 0 132px;
+              -ms-flex: 0 0 132px;
+                  flex: 0 0 132px;
+          margin-right: 10px; } }
     .winners__table_img {
       -webkit-box-flex: 0;
       -webkit-flex: 0 0 60px;
@@ -1183,6 +1208,9 @@ input[type="number"] {
       position: relative;
       background-color: #FFD733;
       margin-right: 48px; }
+      @media (max-width: 767px) {
+        .winners__table_img {
+          margin-right: 13px; } }
       .winners__table_img img {
         position: absolute;
         display: block;
@@ -1205,6 +1233,10 @@ input[type="number"] {
           -ms-flex: 0 0 auto;
               flex: 0 0 auto;
       max-width: 234px; }
+      @media (max-width: 767px) {
+        .winners__table_title {
+          max-width: 118px;
+          font-size: 13px; } }
 
 .five-section {
   padding-top: 58px;
