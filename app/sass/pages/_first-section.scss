@@ -8,20 +8,49 @@
   position: relative;
   z-index: 1;
 
+  @include response-to(small) {
+    background-image: url('../../img/first-sec-bg-mob.png');
+    background-position: center left;
+  }
+
   &__wrap {
     position: relative;
     padding-bottom: 57px;
+
+    @include response-to(small) {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 0;
+    }
   }
 
   &__logo-text-img {
+    display: block;
     margin-bottom: 25px;
     height: auto;
     margin-left: 17px;
+
+    @include response-to(large) {
+      height: auto;
+      width: 350px;
+    }
+
+    @include response-to(small) {
+      width: 274px;
+      transform: rotate(1.5deg);
+      margin: 10px auto -18px;
+      position: relative;
+      z-index: 2;
+    }
   }
 
   .qr {
     display: flex;
     align-items: flex-start;
+
+    @include response-to(small) {
+      display: none;
+    }
 
     &__img {
       position: relative;
@@ -63,6 +92,10 @@
       max-width: 336px;
       color: #fff;
 
+      @include response-to(small) {
+        text-align: center;
+      }
+
       &_date {
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
@@ -83,9 +116,29 @@
     bottom: -2px;
     right: -29px;
 
+    @include response-to(large) {
+      right: 0;
+    }
+
+    @include response-to(small) {
+      order: 2;
+      position: relative;
+      bottom: unset;
+      right: unset;
+    }
+
     &_img {
       position: relative;
       z-index: 2;
+
+      @include response-to(large) {
+        height: auto;
+        width: 510px;
+      }
+
+      @include response-to(small) {
+        width: 341px;
+      }
     }
 
     &_overlay {
@@ -99,6 +152,17 @@
       animation-name: overlayRotate;
       animation-iteration-count: infinite;
       animation-duration: 5s;
+
+      @include response-to(large) {
+        left: -259px;
+      }
+
+      @include response-to(small) {
+        width: 578px;
+        height: auto;
+        left: -83px;
+        bottom: -260px;
+      }
     }
   }
 }

@@ -43,6 +43,23 @@ window.addEventListener('load', function () {
 
     })();
 
+    (function menu() {
+        if (!document.querySelector('.menu')) {
+            return;
+        }
+
+        const menu = document.querySelector('.menu');
+        const menuBtn = document.querySelector('.mob-menu-btn');
+
+        menuBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            this.classList.toggle('active');
+            menu.classList.toggle('active');
+            document.body.classList.toggle('no-scrolling');
+        })
+    })();
+
 });
 
 function checkWidth() {

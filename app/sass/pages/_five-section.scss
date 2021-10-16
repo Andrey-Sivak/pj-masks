@@ -5,12 +5,26 @@
   background-size: cover;
   background-image: url('../../img/five-sec-main-bg.png');
 
+  @include response-to(small) {
+    padding-top: 62px;
+    padding-bottom: 71px;background-image: url('../../img/five-sec-bg-mob.png');
+  }
+
   &__caption {
     color: $dark-blue;
     margin-bottom: 80px;
     font-size: 60px;
     line-height: 82px;
     text-align: center;
+
+    @include response-to(small) {
+      font-size: 48px;
+      line-height: 50px;
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 40px;
+    }
   }
 
   &__wrap {
@@ -25,5 +39,50 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+
+    @include response-to(small) {
+      flex-wrap: wrap;
+      padding: 57px 0 96px;
+      background-image: url('../../img/five-sec-wrap-bg-mob.png');
+    }
+  }
+
+  &__item {
+
+    @include response-to(large) {
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      &:first-of-type {
+        width: 200px;
+      }
+
+      &:last-of-type,
+      &:nth-of-type(2) {
+        width: 180px;
+      }
+    }
+
+    @include response-to(small) {
+      margin-left: auto;
+      margin-right: auto;
+
+      &:first-of-type {
+        width: 275px;
+      }
+
+      &:nth-of-type(2) {
+        width: 165px;
+        margin-top: 75px;
+        margin-bottom: 66px;
+      }
+
+      &:last-of-type {
+        width: 215px;
+      }
+    }
   }
 }

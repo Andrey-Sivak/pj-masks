@@ -4,18 +4,67 @@
   justify-content: space-between;
   align-items: center;
 
-  &__wrap {
+  .mob-menu-btn {
+    display: none;
+    width: 42px;
+    height: 27px;
+    background-image: url('../../img/menu-show.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    @include response-to(small) {
+      display: block;
+
+      &.active {
+        background-image: url('../../img/menu-hide.svg');
+      }
+    }
+  }
+
+  &_wrap {
     width: 100%;
     background-color: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+
+    @include response-to(small) {
+      height: 117px;
+      padding-top: 43px;
+    }
   }
 
   &__logo {
     transform: translateY(12px);
+    position: relative;
+    z-index: 2;
+
+    @include response-to(small) {
+      transform: translateY(10px);
+
+      img {
+        width: 191px;
+        height: auto;
+      }
+    }
   }
 
   &__sign {
     display: flex;
     align-items: center;
+
+    @include response-to(small) {
+        background-image: url('../../img/profile-mob.png');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 30px;
+      height: 37px;
+      cursor: pointer;
+    }
 
     @include on-event {
 
@@ -30,6 +79,10 @@
 
     &.active {
 
+      @include response-to(small) {
+        background-image: url('../../img/profile-mob-in.png');
+      }
+
       .header__decor {
         fill: $green;
       }
@@ -42,6 +95,17 @@
     &_text {
       display: block;
       margin-left: 7px;
+
+      @include response-to(small) {
+        display: none;
+      }
+    }
+
+    svg {
+
+      @include response-to(small) {
+        display: none;
+      }
     }
   }
 }

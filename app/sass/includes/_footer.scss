@@ -5,6 +5,10 @@
   background-image: url('../../img/footer-bg.png');
   padding: 45px 0;
 
+  @include response-to(small) {
+    padding-top: 25px;
+  }
+
   &__wrap {
     margin: 0 auto;
     max-width: 1246px;
@@ -19,6 +23,14 @@
     color: rgba(#fff, .6);
     margin-top: 35px;
     font-family: 'Montserrat', sans-serif;
+
+    @include response-to(small) {
+      margin-top: 16px;
+
+      br {
+        display: none;
+      }
+    }
 
     a {
       text-decoration: underline;
@@ -35,5 +47,10 @@
     color: $yellow;
     font-size: 14px;
     line-height: 19px;
+
+    @include response-to(small) {
+      font-size: 17px;
+      line-height: 260%;
+    }
   }
 }

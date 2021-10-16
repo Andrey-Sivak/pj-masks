@@ -22,3 +22,16 @@ html {
   overflow-x: hidden;
   font-family: 'Marvin', sans-serif;
 }
+
+body {
+  padding-top: 70px;
+
+  @include response-to(small) {
+    padding-top: 117px;
+  }
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}

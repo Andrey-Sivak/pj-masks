@@ -1,11 +1,37 @@
 .menu {
   max-width: 780px;
   width: 100%;
+  position: relative;
+  z-index: 1;
+
+  @include response-to(small) {
+    position: absolute;
+    top: 117px;
+    height: calc(100vh - 117px);
+    background-color: #fff;
+    left: 0;
+    padding-left: 40px;
+    background-image: url('../../img/mob-menu-bg.png');
+    background-position: center;
+    background-size: cover;
+    padding-top: 95px;
+    transform: translateX(105vw);
+    @include transition-ease;
+
+    &.active {
+      transform: translateX(0);
+    }
+  }
 
   &__wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include response-to(small) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__item {
@@ -40,6 +66,12 @@
       font-size: 15px;
       line-height: 21px;
       color: $dark-blue;
+
+      @include response-to(small) {
+        padding: 20px 0;
+        font-size: 27px;
+        margin-left: 27px;
+      }
     }
   }
 

@@ -5,6 +5,13 @@
   background-position: center;
   background-image: url('../../img/green_bg.png');
 
+  @include response-to(small) {
+    padding-top: 57px;
+    padding-bottom: 85px;
+    background-image: url('../../img/third-sec-bg-mob.png');
+    background-position: top center;
+  }
+
   &__caption {
     color: #fff;
     text-align: center;
@@ -12,6 +19,12 @@
     font-size: 60px;
     line-height: 82px;
     margin-bottom: 55px;
+
+    @include response-to(small) {
+      font-size: 48px;
+      line-height: 66px;
+      margin-bottom: 17px;
+    }
   }
 
   &__wrap {
@@ -20,6 +33,11 @@
     margin: 0 auto;
     display: flex;
     align-items: flex-start;
+
+    @include response-to(large) {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
   }
 
   &__item {
@@ -30,6 +48,10 @@
     background-repeat: no-repeat;
     position: relative;
     z-index: 1;
+
+    @include response-to(small) {
+      margin-bottom: 20px;
+    }
 
     &_wrap {
       position: relative;
