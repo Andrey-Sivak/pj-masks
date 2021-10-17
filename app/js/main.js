@@ -60,6 +60,23 @@ window.addEventListener('load', function () {
         })
     })();
 
+    (function questions() {
+        if (!document.querySelector('.questions')) {
+            return;
+        }
+
+        const questions = [...document.querySelectorAll('.question')];
+        questions.forEach(q => {
+           q.addEventListener('click', accordion)
+        });
+
+        function accordion(e) {
+            e.preventDefault();
+
+            this.classList.toggle('active');
+        }
+    })();
+
 });
 
 function checkWidth() {
