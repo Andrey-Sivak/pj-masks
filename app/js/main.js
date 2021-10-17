@@ -1,5 +1,8 @@
 'use strict';
 import * as $ from 'jquery';
+import './jquery.validate.min.js';
+import './slick.min';
+import './select2.min';
 
 
 const mobileWidth = 767;
@@ -74,6 +77,32 @@ window.addEventListener('load', function () {
             e.preventDefault();
 
             this.classList.toggle('active');
+        }
+    })();
+
+    (function select() {
+        if($('.select').length > 1) {
+            $('select').each(function() {
+                let $this = $(this).not('.select-search');
+                let parent = $(this).not('.select-search').parents('.select');
+                $this.select2({
+                    minimumResultsForSearch: Infinity,
+                    dropdownParent: parent
+                });
+            });
+            $('.select-search').each(function() {
+                let $this = $(this);
+                let parent = $(this).parents('.select');
+                $this.select2({
+                    dropdownParent: parent
+                });
+            });
+        } else {
+            console.log(123);
+            $('select').select2({
+                minimumResultsForSearch: Infinity,
+                dropdownParent: $('.select')
+            });
         }
     })();
 
