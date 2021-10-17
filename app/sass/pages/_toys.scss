@@ -1,12 +1,15 @@
 @import "five-section";
 
 .toys {
-
   background-image: url('../../img/toys-bg.png');
   background-size: cover;
   background-position: center top;
   padding-bottom: 22px;
   padding-top: 81px;
+
+  @include response-to(small) {
+    padding-top: 54px;
+  }
 
   &__page-caption {
     font-size: 36px;
@@ -14,6 +17,12 @@
     text-align: center;
     color: #fff;
     margin-bottom: 100px;
+
+    @include response-to(small) {
+      font-size: 36px;
+      line-height: 50px;
+      margin-bottom: 42px;
+    }
   }
 
   &__wrap {
@@ -24,6 +33,15 @@
     max-width: 1062px;
     width: 100%;
     margin: 0 auto;
+
+    @include response-to(large) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    @include response-to(medium) {
+      justify-content: space-around;
+    }
   }
 
   .toy {
@@ -34,6 +52,11 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+
+    @include response-to(small) {
+      flex: 0 0 332px;
+      height: auto;
+    }
 
     /*&.active {
       height: auto;
@@ -49,6 +72,13 @@
         }
       }
     }*/
+
+    &.help {
+
+      @include response-to(medium) {
+        display: none;
+      }
+    }
 
     &__img {
       z-index: 2;
@@ -74,11 +104,19 @@
         height: 168px;
         background-image: url('../../img/toy-yellow-bg.png');
         background-position: center;
+        background-repeat: no-repeat;
         background-size: contain;
         left: 50%;
         transform: translateX(-50%);
         z-index: -1;
         bottom: 0;
+
+        @include response-to(small) {
+          width: 376px;
+          background-image: url('../../img/toy-yellow-bg-mob.png');
+          height: 175px;
+          bottom: -7px;
+        }
       }
     }
 
@@ -93,6 +131,12 @@
       min-height: 140px;
       overflow-y: hidden;
       position: relative;
+
+      @include response-to(small) {
+        height: auto;
+        min-height: unset;
+        margin-top: 10px;
+      }
 
       &.more {
         mask-image: linear-gradient(black 15%, transparent);

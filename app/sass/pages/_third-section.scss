@@ -113,10 +113,14 @@
       &.third {
         flex: 0 0 397px;
 
+        &:before {
+          top: 66px;
+        }
+
         .third-section__item {
           background-image: url('../../img/prizes3.png');
           background-size: 328px;
-          background-position: center 146px;
+          background-position: center 166px;
 
           .third-section__item_note {
             background-image: url('../../img/prizes3-text-bg.png');

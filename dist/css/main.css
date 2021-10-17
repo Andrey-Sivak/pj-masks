@@ -913,10 +913,12 @@ input[type="number"] {
         -webkit-flex: 0 0 397px;
             -ms-flex: 0 0 397px;
                 flex: 0 0 397px; }
+        .home .third-section__item_wrap.third:before {
+          top: 66px; }
         .home .third-section__item_wrap.third .third-section__item {
           background-image: url("../img/prizes3.png");
           background-size: 328px;
-          background-position: center 146px; }
+          background-position: center 166px; }
           .home .third-section__item_wrap.third .third-section__item .third-section__item_note {
             background-image: url("../img/prizes3-text-bg.png");
             padding: 76px 28px 32px 32px;
@@ -996,9 +998,11 @@ input[type="number"] {
     background-repeat: no-repeat; }
     @media (max-width: 767px) {
       .home .five-section__wrap {
-        -webkit-flex-wrap: wrap;
-            -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
         padding: 57px 0 96px;
         background-image: url("../img/five-sec-wrap-bg-mob.png"); } }
   @media (max-width: 1240px) {
@@ -1286,9 +1290,11 @@ input[type="number"] {
     background-repeat: no-repeat; }
     @media (max-width: 767px) {
       .five-section__wrap {
-        -webkit-flex-wrap: wrap;
-            -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
         padding: 57px 0 96px;
         background-image: url("../img/five-sec-wrap-bg-mob.png"); } }
   @media (max-width: 1240px) {
@@ -1318,12 +1324,20 @@ input[type="number"] {
   background-position: center top;
   padding-bottom: 22px;
   padding-top: 81px; }
+  @media (max-width: 767px) {
+    .toys {
+      padding-top: 54px; } }
   .toys__page-caption {
     font-size: 36px;
     line-height: 50px;
     text-align: center;
     color: #fff;
     margin-bottom: 100px; }
+    @media (max-width: 767px) {
+      .toys__page-caption {
+        font-size: 36px;
+        line-height: 50px;
+        margin-bottom: 42px; } }
   .toys__wrap {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1343,6 +1357,15 @@ input[type="number"] {
     max-width: 1062px;
     width: 100%;
     margin: 0 auto; }
+    @media (max-width: 1240px) {
+      .toys__wrap {
+        padding-left: 15px;
+        padding-right: 15px; } }
+    @media (max-width: 992px) {
+      .toys__wrap {
+        -webkit-justify-content: space-around;
+            -ms-flex-pack: distribute;
+                justify-content: space-around; } }
   .toys .toy {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 320px;
@@ -1378,6 +1401,16 @@ input[type="number"] {
         }
       }
     }*/ }
+    @media (max-width: 767px) {
+      .toys .toy {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 332px;
+            -ms-flex: 0 0 332px;
+                flex: 0 0 332px;
+        height: auto; } }
+    @media (max-width: 992px) {
+      .toys .toy.help {
+        display: none; } }
     .toys .toy__img {
       z-index: 2;
       position: relative;
@@ -1399,6 +1432,7 @@ input[type="number"] {
         height: 168px;
         background-image: url("../img/toy-yellow-bg.png");
         background-position: center;
+        background-repeat: no-repeat;
         background-size: contain;
         left: 50%;
         -webkit-transform: translateX(-50%);
@@ -1406,6 +1440,12 @@ input[type="number"] {
                 transform: translateX(-50%);
         z-index: -1;
         bottom: 0; }
+        @media (max-width: 767px) {
+          .toys .toy__title:before {
+            width: 376px;
+            background-image: url("../img/toy-yellow-bg-mob.png");
+            height: 175px;
+            bottom: -7px; } }
     .toys .toy__text {
       margin-top: 6px;
       font-family: 'Montserrat', sans-serif;
@@ -1417,6 +1457,11 @@ input[type="number"] {
       min-height: 140px;
       overflow-y: hidden;
       position: relative; }
+      @media (max-width: 767px) {
+        .toys .toy__text {
+          height: auto;
+          min-height: unset;
+          margin-top: 10px; } }
       .toys .toy__text.more {
         -webkit-mask-image: -webkit-linear-gradient(black 15%, transparent);
                 mask-image: linear-gradient(black 15%, transparent); }
