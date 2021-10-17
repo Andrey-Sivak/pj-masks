@@ -261,32 +261,34 @@
       </div>
     </div>
 
-    <form action="#" class="feedback">
-      <p class="feedback__caption">НЕ нашли ответ <br>на свой вопрос?</p>
-      <p class="feedback__subcaption">Отправьте нам сообщение <br>и мы обязательно ответим!</p>
-      <div class="feedback__form">
-        <div class="input-field">
-          <input type="text" name="email" placeholder="Ваш e-mail" required>
-        </div>
-        <div class="input-field">
-          <div class="select feedback-select">
-            <select name="ThemeId" data-placeholder="Тема сообщения" required>
-              <option value=""></option>
-              <option value="1">Вопрос по работе сайта</option>
-              <option value="2">Вопрос по правилам акции</option>
-              <option value="3">Вопрос по продукции</option>
-              <option value="4">Вопрос по призам</option>
-              <option value="5">Другое</option>
-            </select>
+    <div class="feedback__wrap">
+      <form action="#" class="feedback">
+        <p class="feedback__caption">НЕ нашли ответ <br>на свой вопрос?</p>
+        <p class="feedback__subcaption">Отправьте нам сообщение <br>и мы обязательно ответим!</p>
+        <div class="feedback__form">
+          <div class="input-field">
+            <input type="text" name="email" placeholder="Ваш e-mail" required>
           </div>
-        </div>
-        <div class="input-field">
-          <textarea name="message" placeholder="Текст сообщения" required></textarea>
-        </div>
+          <div class="input-field">
+            <div class="select feedback-select">
+              <select name="ThemeId" data-placeholder="Тема сообщения" required>
+                <option value=""></option>
+                <option value="1">Вопрос по работе сайта</option>
+                <option value="2">Вопрос по правилам акции</option>
+                <option value="3">Вопрос по продукции</option>
+                <option value="4">Вопрос по призам</option>
+                <option value="5">Другое</option>
+              </select>
+            </div>
+          </div>
+          <div class="input-field">
+            <textarea name="message" placeholder="Текст сообщения" required></textarea>
+          </div>
 
-        <button type="submit" class="feedback__button">Отправить</button>
-      </div>
-    </form>
+          <button type="submit" class="feedback__button">Отправить</button>
+        </div>
+      </form>
+    </div>
   </div>
 
 </main>

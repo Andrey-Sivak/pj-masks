@@ -2214,6 +2214,10 @@ input[type="number"] {
   background-position: top center;
   padding-top: 81px;
   padding-bottom: 77px; }
+  @media (max-width: 992px) {
+    .faq {
+      padding-bottom: 0;
+      padding-top: 54px; } }
   .faq__page-caption {
     color: #1C0C44;
     font-size: 36px;
@@ -2233,13 +2237,24 @@ input[type="number"] {
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
             align-items: flex-start; }
+    @media (max-width: 992px) {
+      .faq__wrap {
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap; } }
   .faq .questions {
     max-width: 610px;
     width: 100%;
     margin-right: 20px; }
+    @media (max-width: 992px) {
+      .faq .questions {
+        margin: 0 auto 60px; } }
   .faq .question {
     padding-left: 47px;
     margin-bottom: 20px; }
+    @media (max-width: 767px) {
+      .faq .question {
+        margin-bottom: 13px; } }
     .faq .question.active .question__header:before {
       background-image: url("../img/faq-minus.svg"); }
     .faq .question.active .question__text {
@@ -2256,6 +2271,20 @@ input[type="number"] {
       position: relative;
       padding-top: 6px;
       padding-bottom: 6px; }
+      @media (max-width: 767px) {
+        .faq .question__header {
+          font-size: 14px;
+          min-height: 34px;
+          padding-top: 0;
+          padding-bottom: 0;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center; } }
       .faq .question__header:before {
         position: absolute;
         z-index: 1;
@@ -2289,6 +2318,25 @@ input[type="number"] {
     background-size: contain;
     background-repeat: no-repeat;
     padding-top: 48px; }
+    @media (max-width: 992px) {
+      .faq .feedback {
+        margin: 0 auto; } }
+    @media (max-width: 767px) {
+      .faq .feedback {
+        background-image: url("../img/form-bg-mob.png");
+        width: 337px;
+        height: 607px;
+        padding-top: 56px; } }
+    @media (max-width: 992px) {
+      .faq .feedback__wrap {
+        width: calc(100% + 30px);
+        padding-top: 58px;
+        padding-bottom: 60px;
+        background-image: url("../img/feedback-form-green-bg.png");
+        background-position: center top;
+        background-size: cover;
+        margin-left: -15px;
+        margin-right: -15px; } }
     .faq .feedback__caption {
       font-size: 24px;
       line-height: 33px;
@@ -2296,6 +2344,10 @@ input[type="number"] {
       text-transform: uppercase;
       color: #fff;
       margin-bottom: 9px; }
+      @media (max-width: 767px) {
+        .faq .feedback__caption {
+          font-size: 21px;
+          line-height: 29px; } }
     .faq .feedback__subcaption {
       margin-bottom: 25px;
       font-family: 'Montserrat', sans-serif;
@@ -2308,6 +2360,11 @@ input[type="number"] {
       max-width: 373px;
       width: 100%;
       margin-left: 100px; }
+      @media (max-width: 767px) {
+        .faq .feedback__form {
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 234px; } }
       .faq .feedback__form .input-field input,
       .faq .feedback__form .input-field textarea {
         display: block;
@@ -2391,6 +2448,10 @@ input[type="number"] {
       color: #1C0C44; }
       .faq .feedback__button:hover, .faq .feedback__button:active, .faq .feedback__button:focus {
         background-image: url("../img/send-btn-bg-event.svg"); }
+      @media (max-width: 767px) {
+        .faq .feedback__button {
+          margin-top: 29px;
+          width: 190px; } }
   .faq .input-field input.error:not([type="checkbox"]),
   .faq .input-field textarea.error,
   .faq .input-field select.error + .select2-container .select2-selection--single,
