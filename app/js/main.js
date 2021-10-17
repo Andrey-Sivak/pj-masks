@@ -106,6 +106,20 @@ window.addEventListener('load', function () {
         }
     })();
 
+    (function accountSlider() {
+        if (!document.querySelector('.slider')) {
+            return;
+        }
+
+        $('.slider').slick({
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            dots: false,
+            prevArrow: '<span class="slider-arrow prev"></span>',
+            nextArrow: '<span class="slider-arrow next"></span>',
+        })
+    })();
+
 });
 
 function checkWidth() {

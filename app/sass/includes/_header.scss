@@ -25,7 +25,8 @@
 
   &_wrap {
     width: 100%;
-    background-color: #fff;
+    background-color: rgba(#fff, .8);
+    backdrop-filter: blur(10px);
     position: fixed;
     left: 0;
     top: 0;
@@ -87,7 +88,7 @@
         fill: $green;
       }
 
-      &_text {
+      .header__sign_text {
         color: $green;
       }
     }

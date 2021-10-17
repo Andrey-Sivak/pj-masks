@@ -825,7 +825,9 @@ input[type="number"] {
           background-image: url("../img/menu-hide.svg"); } }
   .header_wrap {
     width: 100%;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
     position: fixed;
     left: 0;
     top: 0;
@@ -875,7 +877,7 @@ input[type="number"] {
         background-image: url("../img/profile-mob-in.png"); } }
     .header__sign.active .header__decor {
       fill: #43A744; }
-    .header__sign.active_text {
+    .header__sign.active .header__sign_text {
       color: #43A744; }
     .header__sign_text {
       display: block;
@@ -2545,6 +2547,191 @@ input[type="number"] {
   .faq .select2-container--default .select2-results__option--highlighted[aria-selected] {
     background: #FFD733;
     color: #1C0C44; }
+
+.account {
+  background-image: url("../img/faq-bg.png");
+  background-position: center top;
+  background-size: cover;
+  padding-top: 81px;
+  padding-bottom: 95px; }
+  .account__page-caption {
+    margin-bottom: 54px;
+    font-size: 36px;
+    line-height: 50px;
+    text-align: center;
+    color: #1C0C44; }
+  .account__wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    position: relative; }
+  .account .my-prizes {
+    text-align: center; }
+    .account .my-prizes__caption {
+      font-size: 36px;
+      line-height: 50px;
+      color: #1C0C44;
+      margin-bottom: 24px; }
+    .account .my-prizes__wrap {
+      width: 293px;
+      margin: 0 auto; }
+      .account .my-prizes__wrap .slider-arrow {
+        position: absolute;
+        width: 30px;
+        height: 34px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: 65px;
+        cursor: pointer;
+        z-index: 10;
+        opacity: .2;
+        -webkit-transition: all ease-in-out .3s;
+        transition: all ease-in-out .3s; }
+        .account .my-prizes__wrap .slider-arrow:hover, .account .my-prizes__wrap .slider-arrow:active, .account .my-prizes__wrap .slider-arrow:focus {
+          opacity: 1; }
+        .account .my-prizes__wrap .slider-arrow.prev {
+          left: 0;
+          background-image: url("../img/slider-lt.svg"); }
+        .account .my-prizes__wrap .slider-arrow.next {
+          right: 0;
+          background-image: url("../img/slider-rt.svg"); }
+    .account .my-prizes__item {
+      margin-bottom: 28px;
+      width: 293px;
+      padding-top: 10px; }
+      .account .my-prizes__item_img {
+        width: 125px;
+        height: 125px;
+        border-radius: 50%;
+        background-color: #FFD733;
+        position: relative;
+        margin: 0 auto 25px; }
+        .account .my-prizes__item_img img {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%); }
+      .account .my-prizes__item_title {
+        font-size: 20px;
+        line-height: 27px;
+        color: #1C0C44; }
+  .account .user-data {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 614px;
+    height: 136px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url("../img/user-data-bg.png");
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .account .user-data__email {
+      font-family: 'Montserrat', sans-serif;
+      color: #1C0C44;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 5px;
+      padding-left: 33px;
+      background-position: left bottom;
+      background-repeat: no-repeat;
+      background-size: initial;
+      background-image: url("../img/email-icon.svg"); }
+    .account .user-data__btn {
+      font-family: 'Montserrat', sans-serif;
+      color: #1C0C44;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      background-color: transparent;
+      border: none;
+      display: block;
+      text-decoration: underline;
+      cursor: pointer; }
+      .account .user-data__btn:hover, .account .user-data__btn:active, .account .user-data__btn:focus {
+        text-decoration: none; }
+  .account .process__caption {
+    font-size: 20px;
+    line-height: 27px;
+    color: #1C0C44;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px; }
+    .account .process__caption .green {
+      color: #43A744; }
+  .account .process__text {
+    margin-bottom: 22px;
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center; }
+  .account .process__heroes {
+    position: relative;
+    width: 376px;
+    height: 337px;
+    margin-bottom: 15px; }
+    .account .process__heroes img {
+      position: absolute;
+      display: block;
+      bottom: 0; }
+    .account .process__heroes_green {
+      left: 0;
+      z-index: 1; }
+    .account .process__heroes_blue {
+      z-index: 2;
+      left: 103px; }
+    .account .process__heroes_red {
+      right: 0;
+      z-index: 1; }
+  .account__btn {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    width: 317px;
+    height: 61px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    padding-top: 15px;
+    background-size: contain;
+    font-size: 28px;
+    line-height: 38px;
+    color: #FFD733;
+    background-image: url("../img/account-btn-bg.png");
+    margin: 0 auto; }
+    .account__btn:hover, .account__btn:active, .account__btn:focus {
+      background-image: url("../img/account-btn-bg-event.png"); }
 
 body,
 html {

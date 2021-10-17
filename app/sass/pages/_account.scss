@@ -1,0 +1,218 @@
+.account {
+  background-image: url('../../img/faq-bg.png');
+  background-position: center top;
+  background-size: cover;
+  padding-top: 81px;
+  padding-bottom: 95px;
+
+  &__page-caption {
+    margin-bottom: 54px;
+    font-size: 36px;
+    line-height: 50px;
+    text-align: center;
+    color: $dark-blue;
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    position: relative;
+  }
+
+  .my-prizes {
+    text-align: center;
+
+    &__caption {
+      font-size: 36px;
+      line-height: 50px;
+      color: $dark-blue;
+      margin-bottom: 24px;
+    }
+
+    &__wrap {
+      width: 293px;
+      margin: 0 auto;
+
+      .slider-arrow {
+        position: absolute;
+        width: 30px;
+        height: 34px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: 65px;
+        cursor: pointer;
+        z-index: 10;
+        opacity: .2;
+        @include transition-ease;
+
+        @include on-event {
+          opacity: 1;
+        }
+
+        &.prev {
+          left: 0;
+          background-image: url('../../img/slider-lt.svg');
+        }
+
+        &.next {
+          right: 0;
+          background-image: url('../../img/slider-rt.svg');
+        }
+      }
+    }
+
+    &__item {
+      margin-bottom: 28px;
+      width: 293px;
+      padding-top: 10px;
+
+      &_img {
+        width: 125px;
+        height: 125px;
+        border-radius: 50%;
+        background-color: $yellow;
+        position: relative;
+        margin: 0 auto 25px;
+
+        img {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      &_title {
+        font-size: 20px;
+        line-height: 27px;
+        color: $dark-blue;
+      }
+    }
+  }
+
+  .user-data {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 614px;
+    height: 136px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url('../../img/user-data-bg.png');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__email {
+      font-family: 'Montserrat', sans-serif;
+      color: $dark-blue;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 5px;
+      padding-left: 33px;
+      background-position: left bottom;
+      background-repeat: no-repeat;
+      background-size: initial;
+      background-image: url('../../img/email-icon.svg');
+    }
+
+    &__btn {
+      font-family: 'Montserrat', sans-serif;
+      color: $dark-blue;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      background-color: transparent;
+      border: none;
+      display: block;
+      text-decoration: underline;
+      cursor: pointer;
+
+      @include on-event {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .process {
+
+    &__caption {
+      font-size: 20px;
+      line-height: 27px;
+      color: $dark-blue;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+
+      .green {
+        color: $green;
+      }
+    }
+
+    &__text {
+      margin-bottom: 22px;
+      font-family: 'Montserrat', sans-serif;
+      color: #000;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+    }
+
+    &__heroes {
+      position: relative;
+      width: 376px;
+      height: 337px;
+      margin-bottom: 15px;
+
+      img {
+        position: absolute;
+        display: block;
+        bottom: 0;
+      }
+
+      &_green {
+        left: 0;
+        z-index: 1;
+      }
+
+      &_blue {
+        z-index: 2;
+        left: 103px;
+      }
+
+      &_red {
+        right: 0;
+        z-index: 1;
+      }
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    width: 317px;
+    height: 61px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    padding-top: 15px;
+    background-size: contain;
+    font-size: 28px;
+    line-height: 38px;
+    color: $yellow;
+    background-image: url('../../img/account-btn-bg.png');
+    margin: 0 auto;
+
+    @include on-event {
+      background-image: url('../../img/account-btn-bg-event.png');
+    }
+  }
+}
