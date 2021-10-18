@@ -1,0 +1,225 @@
+.modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  @include flex-center();
+  z-index: -10;
+  background-color: rgba(#000, 0);
+  @include transition-ease;
+
+  &.active {
+    z-index: 1000;
+    background-color: rgba(#000, .8);
+
+    .modal-window {
+      transform: translateY(0);
+    }
+  }
+
+  &-window {
+    width: 350px;
+    min-height: 320px;
+    position: relative;
+    background-color: #1C0C44;
+    padding: 38px 35px 45px;
+    transform: translateY(-200vw);
+    @include transition-ease;
+  }
+
+  &-close {
+    position: absolute;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    top: 19px;
+    right: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../../img/modal-close.svg');
+  }
+  
+  &-caption {
+    font-size: 30px;
+    line-height: 41px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 42px;
+  }
+
+  &-form {
+
+    &-label  {
+      width: 100%;
+      margin-bottom: 10px;
+      display: block;
+
+      span.error {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 12px;
+        display: block;
+        text-align: center;
+        line-height: 17px;
+        margin-bottom: 12px;
+        color: #F72A16;
+        z-index: 12;
+      }
+
+      &.check {
+        display: flex;
+        padding-left: 31px;
+        position: relative;
+        font-family: 'Montserrat', sans-serif;
+        color: #fff;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        cursor: pointer;
+        margin-top: 20px;
+        margin-bottom: 32px;
+
+        span.error {
+          display: none!important;
+        }
+
+        a {
+          position: absolute;
+          color: $yellow;
+          text-decoration: underline;
+          bottom: -100%;
+        }
+
+        input {
+          width: 1px;
+          height: 1px;
+          position: absolute;
+          opacity: 0;
+          z-index: -100;
+          visibility: hidden;
+
+          &:checked + .checkbox:before {
+            content: '';
+          }
+
+          &.error + .checkbox {
+            border-color: #F72A16;
+          }
+        }
+
+        .checkbox {
+          width: 16px;
+          height: 16px;
+          display: block;
+          border: 2px solid #FFFFFF;
+          position: absolute;
+          left: 0;
+          top: 0;
+
+          &:before {
+            position: absolute;
+            background-color: #fff;
+            width: 8px;
+            height: 8px;
+            left: 2px;
+            top: 2px;
+          }
+        }
+      }
+    }
+
+    &-input {
+      display: block;
+      background-color: #fff;
+      width: 100%;
+      padding: 15px 16px 16px;
+      font-family: 'Montserrat', sans-serif;
+      color: $dark-blue;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+
+      &::placeholder {
+        font-family: 'Montserrat', sans-serif;
+        color: #989898;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+  }
+
+  &-text {
+    margin-bottom: 25px;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+
+    a {
+      font-family: 'Montserrat', sans-serif;
+      color: $yellow;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      text-decoration: underline;
+      display: inline;
+      text-align: center;
+
+      @include on-event {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &-btn {
+    display: block;
+    width: 291px;
+    height: 58px;
+    text-align: center;
+    color: $dark-blue;
+    margin: 28px auto 21px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 25px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-family: 'Marvin', sans-serif;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../../img/modal-btn-bg.svg');
+
+    &.white {
+      color: #fff;
+    }
+  }
+
+  &-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &-link {
+    font-family: 'Montserrat', sans-serif;
+    color: $yellow;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration: underline;
+    display: block;
+    text-align: center;
+
+    @include on-event {
+      text-decoration: none;
+    }
+  }
+}

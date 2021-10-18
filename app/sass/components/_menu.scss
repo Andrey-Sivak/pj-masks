@@ -10,7 +10,7 @@
     height: calc(100vh - 117px);
     background-color: #fff;
     left: 0;
-    padding-left: 40px;
+    padding-left: 55px;
     background-image: url('../../img/mob-menu-bg.png');
     background-position: center;
     background-size: cover;
@@ -37,6 +37,13 @@
   &__item {
     display: flex;
     align-items: center;
+
+    svg {
+
+      @include response-to(small) {
+        transform: scale(2);
+      }
+    }
 
     @include on-event {
 
@@ -70,7 +77,7 @@
       @include response-to(small) {
         padding: 20px 0;
         font-size: 27px;
-        margin-left: 27px;
+        margin-left: 34px;
       }
     }
   }

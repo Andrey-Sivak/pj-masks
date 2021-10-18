@@ -285,7 +285,7 @@
             <textarea name="message" placeholder="Текст сообщения" required></textarea>
           </div>
 
-          <button type="submit" class="feedback__button">Отправить</button>
+          <button type="submit" class="feedback__button" data-popup="send-request">Отправить</button>
         </div>
       </form>
     </div>
@@ -300,6 +300,15 @@
       <br>Информация об организаторе Акции, правилах её проведения, количестве призов, сроке, месте и порядке их получения на сайте <a href="https://promo-pjmasks.ru">https://promo-pjmasks.ru</a></p>
   </div>
 </footer>
+
+<div class="modal" data-close="true" data-modal="send-request">
+  <div class="modal-window">
+    <span class="modal-close" data-close="true"></span>
+    <p class="modal-caption"> </p>
+    <p class="modal-text">Ваше обращение <br>принято</p>
+    <button class="modal-btn" data-close="true">Далее</button>
+  </div>
+</div>
 
 </body>
 </html>

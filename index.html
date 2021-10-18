@@ -97,7 +97,9 @@
 
 <header class="header_wrap">
     <div class="container header">
-      <span class="mob-menu-btn"></span>
+      <div class="mob-menu-btn">
+        <span></span>
+      </div>
       <a href="./index.html" class="header__logo">
         <img src="./dist/img/logo.png"
              width="161"
@@ -170,7 +172,7 @@
           </li>
         </ul>
       </nav>
-      <a href="#" class="header__sign">
+      <a href="#" class="header__sign" data-popup="enter">
         <svg width="16"
              height="20"
              viewBox="0 0 16 20"
@@ -349,6 +351,104 @@
       <br>Информация об организаторе Акции, правилах её проведения, количестве призов, сроке, месте и порядке их получения на сайте <a href="https://promo-pjmasks.ru">https://promo-pjmasks.ru</a></p>
   </div>
 </footer>
+
+<div class="modal" data-close="true" data-modal="enter">
+  <div class="modal-window">
+    <span class="modal-close" data-close="true"></span>
+    <p class="modal-caption">ВХОД</p>
+    <form action="#" class="modal-form">
+      <label for="modal_email" class="modal-form-label">
+        <input type="text"
+               id="modal_email"
+               name="modal_email"
+               placeholder="E-mail"
+               class="modal-form-input">
+      </label>
+      <label for="password" class="modal-form-label">
+        <input type="password"
+               id="password"
+               name="password"
+               placeholder="Пароль"
+               class="modal-form-input">
+      </label>
+      <label for="check1" class="modal-form-label check">
+        Запомнить вход
+        <input type="checkbox"
+               id="check1"
+               name="check1">
+        <span class="checkbox"></span>
+      </label>
+
+      <button class="modal-btn white">Войти</button>
+    </form>
+    <div class="modal-links">
+      <a href="#" class="modal-link" data-popup="registration">Регистрация</a>
+      <a href="#" class="modal-link" data-popup="forgot-pass">Забыли пароль?</a>
+    </div>
+  </div>
+</div>
+
+<div class="modal" data-close="true" data-modal="registration"  >
+  <div class="modal-window">
+    <span class="modal-close" data-close="true"></span>
+    <p class="modal-caption">Регистрация</p>
+    <form action="#" class="modal-form">
+      <label for="modal_email_reg" class="modal-form-label">
+        <input type="text"
+               id="modal_email_reg"
+               name="modal_email_reg"
+               placeholder="E-mail"
+               class="modal-form-input">
+      </label>
+      <label for="check2" class="modal-form-label check">
+        Я согласен с условиями и <br><a href="#">правилами акции</a>
+        <input type="checkbox"
+               id="check2"
+               name="check2">
+        <span class="checkbox"></span>
+      </label>
+      <label for="check3" class="modal-form-label check">
+        Я согласен получать рассылку<br>по акциям
+        <input type="checkbox"
+               id="check3"
+               name="check3">
+        <span class="checkbox"></span>
+      </label>
+
+      <button class="modal-btn white">зарегистрироваться</button>
+    </form>
+    <a href="#" class="modal-link" data-popup="enter">Авторизация</a>
+  </div>
+</div>
+
+<div class="modal" data-close="true" data-modal="forgot-pass"  >
+  <div class="modal-window">
+    <span class="modal-close" data-close="true"></span>
+    <p class="modal-caption">восстановление пароля</p>
+    <p class="modal-text">Введите email, указанный при регистрации. Мы вышлем тудановый пароль.</p>
+    <form action="#" class="modal-form">
+      <label for="modal_email_forgot_pass" class="modal-form-label">
+        <input type="text"
+               id="modal_email_forgot_pass"
+               name="modal_email_forgot_pass"
+               placeholder="E-mail"
+               class="modal-form-input">
+      </label>
+      <button class="modal-btn">получить пароль</button>
+    </form>
+  </div>
+</div>
+
+<!-- Ваш пароль отправлен  на указанный e-mail -->
+
+<!--<div class="modal" data-close="true" data-modal="forgot-pass-sent">
+  <div class="modal-window">
+    <span class="modal-close" data-close="true"></span>
+    <p class="modal-caption">ВХОД</p>
+    <p class="modal-text">Ваш пароль отправлен <br>на указанный e-mail</p>
+    <button class="modal-btn" data-close="true">Далее</button>
+  </div>
+</div>-->
 
 </body>
 </html>

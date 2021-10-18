@@ -46,7 +46,7 @@ window.addEventListener('load', function () {
 
     })();
 
-    (function menu() {
+    (function mobMenu() {
         if (!document.querySelector('.menu')) {
             return;
         }
@@ -61,6 +61,64 @@ window.addEventListener('load', function () {
             menu.classList.toggle('active');
             document.body.classList.toggle('no-scrolling');
         })
+    })();
+
+    (function menu() {
+        if (!document.querySelector('.menu')) {
+            return;
+        }
+
+        if (!document.getElementById('presents')) {
+            return;
+        }
+
+        const prizes = document.getElementById('presents');
+        let sticky = prizes.offsetTop;
+
+        const prizesMenuItem = [...document.querySelectorAll('.menu__item > a')]
+            .filter(h => h.innerHTML === 'Призы')[0];
+
+        const mainMenuItem = [...document.querySelectorAll('.menu__item > a')]
+            .filter(h => h.innerHTML === 'Главная')[0];
+
+        prizesMenuItem.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            window.scroll({
+                top: sticky,
+                left: 0,
+                behavior: "smooth",
+            });
+
+            if (document.querySelector('.menu').classList.contains('active')) {
+
+                document.querySelector('.menu').classList.remove('active');
+                document.body.style.overflowY = 'scroll';
+                document.querySelector('.header').classList.remove('active');
+                document.querySelector('.mob-menu-btn').classList.remove('active');
+            }
+
+            if (!this.classList.contains('active')) {
+                this.classList.add('active');
+            }
+        });
+
+        if (window.pageYOffset > sticky) {
+            mainMenuItem.parentElement.classList.remove("active");
+            prizesMenuItem.parentElement.classList.add("active");
+        }
+
+        window.addEventListener('scroll', scrollPrizes);
+
+        function scrollPrizes() {
+            if (window.pageYOffset > sticky) {
+                mainMenuItem.parentElement.classList.remove("active");
+                prizesMenuItem.parentElement.classList.add("active");
+            } else {
+                prizesMenuItem.parentElement.classList.remove("active");
+                mainMenuItem.parentElement.classList.add("active");
+            }
+        }
     })();
 
     (function questions() {
@@ -118,6 +176,129 @@ window.addEventListener('load', function () {
             prevArrow: '<span class="slider-arrow prev"></span>',
             nextArrow: '<span class="slider-arrow next"></span>',
         })
+    })();
+
+    (function validate() {
+        var form = $('form');
+
+        $.each(form, function () {
+            $(this).validate({
+                ignore: [],
+                errorClass: 'error',
+                validClass: 'success',
+                rules: {
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    modal_email: {
+                        required: true,
+                        email: true
+                    },
+                    modal_email_reg: {
+                        required: true,
+                        email: true
+                    },
+                    modal_email_forgot_pass: {
+                        required: true,
+                        email: true
+                    },
+                    message: {
+                        required: true
+                    },
+                    check1: {
+                        required: true
+                    },
+                    check2: {
+                        required: true
+                    },
+                    password: {
+                        required: true,
+                        normalizer: function normalizer(value) {
+                            return $.trim(value);
+                        }
+                    }
+                },
+                errorElement : 'span',
+                errorPlacement: function(error, element) {
+                    var placement = $(element).data('error');
+                    if (placement) {
+                        $(placement).append(error);
+                    } else {
+                        error.insertBefore(element);
+                    }
+                },
+                messages: {
+                    phone: 'Некорректный номер',
+                    email: 'Некорректный e-mail'
+                }
+            });
+        });
+
+        $.validator.addMethod('email', function (value, element) {
+            return this.optional(element) || /\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}/.test(value);
+        });
+    })();
+
+    (function modals() {
+        if (!document.querySelector('.modal')) {
+            return;
+        }
+
+        const popupBtns = [...document.querySelectorAll('[data-popup]')];
+        const popups = [...document.querySelectorAll('.modal')];
+
+        popupBtns.forEach(p => {
+            p.addEventListener('click', popupShow);
+        });
+
+        popups.forEach(p => {
+            p.addEventListener('click', popupHide);
+        });
+
+        function popupShow(e) {
+            e.preventDefault();
+           const currentPopupName = this.dataset.popup;
+           const currentPopup = document.querySelector(`.modal[data-modal="${currentPopupName}"]`);
+
+           if (document.querySelector('.modal.active')) {
+               document.querySelector('.modal.active')
+                   .classList
+                   .remove('active');
+           }
+
+           currentPopup.classList.add('active');
+        }
+
+        function popupHide(e) {
+            if (e.target.dataset.close) {
+                this.classList.remove('active');
+            }
+        }
+    })();
+
+    (function toys() {
+        if (!document.querySelector('.toy__more')) {
+            return;
+        }
+
+        const toys = [...document.querySelectorAll('.toy')];
+        const toysWithMoreText = toys.filter(t => t.querySelector('.toy__more'));
+
+        toysWithMoreText.forEach(t => {
+            const moreBtn = t.querySelector('.toy__more');
+            const lessBtn = t.querySelector('.toy__less');
+
+            moreBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                this.parentElement.classList.add('active');
+            });
+
+            lessBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                this.parentElement.classList.remove('active');
+            })
+        });
     })();
 
 });
