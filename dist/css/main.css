@@ -2554,12 +2554,19 @@ input[type="number"] {
   background-size: cover;
   padding-top: 81px;
   padding-bottom: 95px; }
+  @media (max-width: 767px) {
+    .account {
+      padding-top: 54px;
+      padding-bottom: 63px; } }
   .account__page-caption {
     margin-bottom: 54px;
     font-size: 36px;
     line-height: 50px;
     text-align: center;
     color: #1C0C44; }
+    @media (max-width: 767px) {
+      .account__page-caption {
+        margin-bottom: 5px; } }
   .account__wrap {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2573,6 +2580,19 @@ input[type="number"] {
         -ms-flex-pack: distribute;
             justify-content: space-around;
     position: relative; }
+    @media (max-width: 992px) {
+      .account__wrap {
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap; } }
+  @media (max-width: 992px) {
+    .account__left {
+      width: 100%;
+      -webkit-box-ordinal-group: 3;
+      -webkit-order: 2;
+          -ms-flex-order: 2;
+              order: 2;
+      margin-top: 63px; } }
   .account .my-prizes {
     text-align: center; }
     .account .my-prizes__caption {
@@ -2626,6 +2646,9 @@ input[type="number"] {
         font-size: 20px;
         line-height: 27px;
         color: #1C0C44; }
+  @media (max-width: 992px) {
+    .account__right {
+      width: 100%; } }
   .account .user-data {
     position: absolute;
     left: 0;
@@ -2653,6 +2676,22 @@ input[type="number"] {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; }
+    @media (max-width: 1100px) {
+      .account .user-data {
+        width: 520px; } }
+    @media (max-width: 992px) {
+      .account .user-data {
+        position: relative;
+        width: 100%;
+        max-width: 614px;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto; } }
+    @media (max-width: 767px) {
+      .account .user-data {
+        width: 347px;
+        height: 174px;
+        background-image: url("../img/user-data-bg-mob.png"); } }
     .account .user-data__email {
       font-family: 'Montserrat', sans-serif;
       color: #1C0C44;
@@ -2678,6 +2717,11 @@ input[type="number"] {
       cursor: pointer; }
       .account .user-data__btn:hover, .account .user-data__btn:active, .account .user-data__btn:focus {
         text-decoration: none; }
+  @media (max-width: 992px) {
+    .account .process {
+      max-width: 375px;
+      width: 100%;
+      margin: 0 auto; } }
   .account .process__caption {
     font-size: 20px;
     line-height: 27px;
@@ -2700,6 +2744,12 @@ input[type="number"] {
     width: 376px;
     height: 337px;
     margin-bottom: 15px; }
+    @media (max-width: 767px) {
+      .account .process__heroes {
+        left: 50%;
+        -webkit-transform: translateX(-51%);
+            -ms-transform: translateX(-51%);
+                transform: translateX(-51%); } }
     .account .process__heroes img {
       position: absolute;
       display: block;
