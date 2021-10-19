@@ -4,12 +4,24 @@
   background-size: cover;
   background-position: center;
   background-image: url('../../img/green_bg.png');
+  position: relative;
 
   @include response-to(small) {
     padding-top: 57px;
     padding-bottom: 85px;
     background-image: url('../../img/third-sec-bg-mob.png');
     background-position: top center;
+  }
+
+  #presents-help {
+    position: absolute;
+    bottom: 100%;
+    height: 117px;
+    display: none;
+
+    @include response-to(small) {
+      display: block;
+    }
   }
 
   &__caption {
