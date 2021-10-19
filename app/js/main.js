@@ -84,9 +84,11 @@ window.addEventListener('load', function () {
         prizesMenuItem.addEventListener('click', function(e) {
             e.preventDefault();
 
+            console.log(sticky);
+
             if (isMobile) {
                 $([document.documentElement, document.body]).animate({
-                    scrollTop: $("#presents").offset().top - 117
+                    scrollTop: 1568
                 }, 850);
             } else {
                 $([document.documentElement, document.body]).animate({

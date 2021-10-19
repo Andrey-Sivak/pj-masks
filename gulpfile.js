@@ -16,7 +16,7 @@ let isProd = !isDev;
 
 let webpackConfig = {
 	output: {
-		filename: 'main1.js'
+		filename: 'main.js'
 	},
 	module: {
 		rules: [
