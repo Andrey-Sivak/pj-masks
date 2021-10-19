@@ -1816,16 +1816,14 @@ input[type="number"] {
           padding-left: 8px !important; } }
 
 .home .third-section {
-  padding-top: 124px;
-  margin-top: -71px;
+  padding-top: 53px;
   padding-bottom: 62px;
   background-size: cover;
   background-position: center;
   background-image: url("../img/green_bg.png"); }
   @media (max-width: 767px) {
     .home .third-section {
-      padding-top: 174px;
-      margin-top: -117px;
+      padding-top: 57px;
       padding-bottom: 85px;
       background-image: url("../img/third-sec-bg-mob.png");
       background-position: top center; } }
