@@ -84,11 +84,9 @@ window.addEventListener('load', function () {
         prizesMenuItem.addEventListener('click', function(e) {
             e.preventDefault();
 
-            window.scroll({
-                top: sticky,
-                left: 0,
-                behavior: "smooth",
-            });
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#presents").offset().top
+            }, 850);
 
             if (document.querySelector('.menu').classList.contains('active')) {
 
