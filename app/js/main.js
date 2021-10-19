@@ -88,7 +88,7 @@ window.addEventListener('load', function () {
 
             if (isMobile) {
                 $([document.documentElement, document.body]).animate({
-                    scrollTop: 1000
+                    scrollTop: 1451
                 }, 850);
             } else {
                 $([document.documentElement, document.body]).animate({
