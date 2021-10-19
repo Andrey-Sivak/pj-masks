@@ -9,7 +9,6 @@
     width: 42px;
     height: 28px;
     cursor: pointer;
-    @include flex-center();
 
     span {
       width: 100%;
@@ -42,7 +41,7 @@
     }
 
     @include response-to(small) {
-      display: block;
+      @include flex-center();
 
       &.active {
 
