@@ -89,7 +89,7 @@ window.addEventListener('load', function () {
             if (isMobile) {
                 $([document.documentElement, document.body]).animate({
                     // scrollTop: $("#presents-help").offset().top
-                    scrollTop: 500
+                    scrollTop: 1451
                 }, 850);
             } else {
                 $([document.documentElement, document.body]).animate({
