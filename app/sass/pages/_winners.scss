@@ -32,7 +32,7 @@
     margin: 0 auto;
 
     &_label {
-      padding-top: 14px;
+      //padding-top: 14px;
       height: 100%;
       display: block;
       position: relative;
@@ -52,9 +52,20 @@
         border: 1px solid #80858A;
         box-sizing: border-box;
       }
+
+      span.error {
+        font-family: 'Montserrat', sans-serif;
+        position: absolute;
+        color: #F72A16;
+        top: -20px;
+        right: 20px;
+      }
     }
 
     &_input {
+      max-height: 100%;
+      min-height: 100%;
+      box-sizing: border-box;
       text-align: center;
       font-size: 18px;
       line-height: 22px;
@@ -68,6 +79,7 @@
         color: #8E8E8E;
         font-size: 18px;
         line-height: 22px;
+        font-family: 'Pluto sans', sans-serif;
       }
     }
 

@@ -12,13 +12,18 @@
   &:before {
     position: absolute;
     content: '';
-    filter: blur(12px);
     width: 150%;
-    height: 65px;
+    height: 85px;
     left: 50%;
     transform: translateX(-50%);
+    background-image: url('../../img/blur.png');
+    background-size: contain;
     top: -38px;
-    background: #201154;
+
+    @include response-to(small) {
+      background-image: url('../../img/blur-mb.png');
+      top: -45px;
+    }
   }
 
   &__mob-text {

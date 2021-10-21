@@ -84,8 +84,6 @@ window.addEventListener('load', function () {
         prizesMenuItem.addEventListener('click', function(e) {
             e.preventDefault();
 
-            console.log(sticky);
-
             if (isMobile) {
                 $([document.documentElement, document.body]).animate({
                     // scrollTop: $("#presents-help").offset().top
@@ -110,7 +108,7 @@ window.addEventListener('load', function () {
             }
         });
 
-        if (window.pageYOffset > sticky) {
+        if (window.pageYOffset > sticky - 100) {
             mainMenuItem.parentElement.classList.remove("active");
             prizesMenuItem.parentElement.classList.add("active");
         }
@@ -118,7 +116,7 @@ window.addEventListener('load', function () {
         window.addEventListener('scroll', scrollPrizes);
 
         function scrollPrizes() {
-            if (window.pageYOffset > sticky) {
+            if (window.pageYOffset > sticky - 100) {
                 mainMenuItem.parentElement.classList.remove("active");
                 prizesMenuItem.parentElement.classList.add("active");
             } else {

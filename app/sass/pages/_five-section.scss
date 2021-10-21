@@ -17,6 +17,10 @@
     line-height: 82px;
     text-align: center;
 
+    br {
+      display: none;
+    }
+
     @include response-to(small) {
       font-size: 48px;
       line-height: 50px;
@@ -24,6 +28,10 @@
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 40px;
+
+      br {
+        display: block;
+      }
     }
   }
 
@@ -49,6 +57,14 @@
 
   &__item {
 
+    &.wb {
+      background: linear-gradient(180deg, #A82C9E 0%, #9A2896 100%);
+      border-radius: 10px;
+      @include flex-center();
+      width: 299px;
+      height: 74px;
+    }
+
     @include response-to(large) {
 
       img {
@@ -60,9 +76,15 @@
         width: 200px;
       }
 
-      &:last-of-type,
-      &:nth-of-type(2) {
+      &:last-of-type {
         width: 180px;
+      }
+
+
+      &:nth-of-type(2) {
+        width: 265px;
+        height: 66px;
+        padding: 0 11px;
       }
     }
 
@@ -75,7 +97,6 @@
       }
 
       &:nth-of-type(2) {
-        width: 165px;
         margin-top: 75px;
         margin-bottom: 66px;
       }

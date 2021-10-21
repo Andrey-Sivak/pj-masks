@@ -73,8 +73,7 @@
     z-index: 2;
 
     @include response-to(small) {
-      height: 117px;
-      padding-top: 43px;
+      height: auto;
     }
   }
 
@@ -98,7 +97,6 @@
     align-items: center;
 
     @include response-to(small) {
-        background-image: url('../../img/profile-mob.png');
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
@@ -120,10 +118,6 @@
 
     &.active {
 
-      @include response-to(small) {
-        background-image: url('../../img/profile-mob-in.png');
-      }
-
       .header__decor {
         fill: $green;
       }
@@ -144,8 +138,19 @@
 
     svg {
 
-      @include response-to(small) {
+      &.pc {
+
+        @include response-to(small) {
+          display: none;
+        }
+      }
+
+      &.mob {
         display: none;
+
+        @include response-to(small) {
+          display: block;
+        }
       }
     }
   }

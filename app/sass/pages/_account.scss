@@ -269,9 +269,24 @@
     color: $yellow;
     background-image: url('../../img/account-btn-bg.png');
     margin: 0 auto;
+    position: relative;
+
+    &:before {
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      content: '';
+      background-image: url('../../img/account-btn-bg-event.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
 
     @include on-event {
-      background-image: url('../../img/account-btn-bg-event.png');
+      background-image: unset;
     }
   }
 }
