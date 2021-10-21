@@ -93,7 +93,7 @@ window.addEventListener('load', function () {
                 }, 850);
             } else {
                 $([document.documentElement, document.body]).animate({
-                    scrollTop: $("#presents").offset().top - 71
+                    scrollTop: $("#presents-help").offset().top
                 }, 850);
             }
 

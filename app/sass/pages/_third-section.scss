@@ -16,11 +16,10 @@
   #presents-help {
     position: absolute;
     bottom: 100%;
-    height: 117px;
-    display: none;
+    height: 71px;
 
     @include response-to(small) {
-      display: block;
+      height: 117px;
     }
   }
 
