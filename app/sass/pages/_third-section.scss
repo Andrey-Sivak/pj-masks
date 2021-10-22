@@ -19,7 +19,7 @@
     height: 71px;
 
     @include response-to(small) {
-      height: 117px;
+      height: 0;
     }
   }
 

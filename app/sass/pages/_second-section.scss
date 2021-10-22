@@ -18,7 +18,7 @@
     transform: translateX(-50%);
     background-image: url('../../img/blur.png');
     background-size: contain;
-    top: -38px;
+    top: -43px;
 
     @include response-to(small) {
       background-image: url('../../img/blur-mb.png');

@@ -1525,7 +1525,7 @@ input[type="number"] {
             transform: translateX(-50%);
     background-image: url("../img/blur.png");
     background-size: contain;
-    top: -38px; }
+    top: -43px; }
     @media (max-width: 767px) {
       .home .second-section:before {
         background-image: url("../img/blur-mb.png");
@@ -1843,7 +1843,7 @@ input[type="number"] {
     height: 71px; }
     @media (max-width: 767px) {
       .home .third-section #presents-help {
-        height: 117px; } }
+        height: 0; } }
   .home .third-section__caption {
     color: #fff;
     text-align: center;
@@ -2198,7 +2198,8 @@ input[type="number"] {
       min-width: 56px;
       border: none;
       display: block;
-      z-index: 1; }
+      z-index: 1;
+      margin: 0; }
       .winners__search_btn:before {
         position: absolute;
         top: 0;
