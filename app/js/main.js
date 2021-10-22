@@ -82,34 +82,20 @@ window.addEventListener('load', function () {
         const mainMenuItem = [...document.querySelectorAll('.menu__item > a')]
             .filter(h => h.innerHTML === 'Главная')[0];
 
-        prizesMenuItem.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            if (isMobile) {
-                $([document.documentElement, document.body]).animate({
-                    // scrollTop: $("#presents-help").offset().top
-                    scrollTop: 1570
-                }, 850);
-            } else {
-                $([document.documentElement, document.body]).animate({
-                    scrollTop: $("#presents-help").offset().top
-                }, 850);
+        $('.anchor[href^="#"]').click(function () {
+            if(isMobile) {
+                $('.menu__item').removeClass('active');
+                $('.mob-menu-btn').removeClass('active');
+                $('.menu').removeClass('active');
+                $('body').removeClass('no-scrolling');
             }
-
-            if (document.querySelector('.menu').classList.contains('active')) {
-
-                document.querySelector('.menu').classList.remove('active');
-                document.body.style.overflowY = 'scroll';
-                document.querySelector('.header').classList.remove('active');
-                document.querySelector('.mob-menu-btn').classList.remove('active');
-            }
-
-            if (!this.classList.contains('active')) {
-                this.classList.add('active');
-            }
+            const elementClick = $(this).attr("href");
+            const destination = $(elementClick).offset().top-150;
+            $('html, body').animate( { scrollTop: destination }, 500, 'swing' );
+            return false;
         });
 
-        if (window.pageYOffset > sticky - 100) {
+        if (window.pageYOffset > sticky - 150) {
             mainMenuItem.parentElement.classList.remove("active");
             prizesMenuItem.parentElement.classList.add("active");
         }
@@ -117,7 +103,7 @@ window.addEventListener('load', function () {
         window.addEventListener('scroll', scrollPrizes);
 
         function scrollPrizes() {
-            if (window.pageYOffset > sticky - 100) {
+            if (window.pageYOffset > sticky - 150) {
                 mainMenuItem.parentElement.classList.remove("active");
                 prizesMenuItem.parentElement.classList.add("active");
             } else {
