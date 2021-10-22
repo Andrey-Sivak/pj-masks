@@ -2,6 +2,7 @@
 import * as $ from 'jquery';
 import './jquery.validate.min.js';
 import './slick.min';
+import './jquery.scrollbar.min';
 import './select2.min';
 
 
@@ -306,6 +307,9 @@ window.addEventListener('load', function () {
         });
     })();
 
+    (function scrollBar() {
+        $('.winners__table_wrap').scrollbar();
+    })();
 });
 
 function checkWidth() {
