@@ -44,13 +44,13 @@
       font-family: 'Montserrat', sans-serif;
       color: $yellow;
       font-weight: bold;
-      font-size: 16px;
-      line-height: 20px;
+      font-size: 14px;
+      line-height: 17px;
     }
 
     &_text {
-      font-size: 19px;
-      line-height: 26px;
+      font-size: 14px;
+      line-height: 19px;
       color: #fff;
       margin-top: 3px;
       margin-bottom: 31px;
@@ -108,7 +108,7 @@
     position: relative;
     background-color: #fff;
     background-size: cover;
-    height: 208px;
+    height: 188px;
 
     @media(max-width: 1240px) and (min-width: 767px)  {
       clip-path: unset!important;
@@ -134,7 +134,7 @@
       top: 50%;
       transform: translate(-50%, -50%);
       background-color: #FFD733;
-      height: 194px;
+      height: 174px;
 
       @media(max-width: 1240px) and (min-width: 767px)  {
         clip-path: unset!important;
@@ -147,7 +147,7 @@
     }
 
     &.first {
-      padding: 3px 8px 19px 30px;
+      padding: 10px 8px 19px 30px;
       flex: 0 0 302px;
       clip-path: polygon(0 0, 220px 0, 100% 100%, 0 100%);
       margin-right: -70px;
@@ -157,7 +157,7 @@
         clip-path: polygon(0 0, 100% 0, 100% 157px, 0 100%) !important;
         margin-right: 0;
         margin-bottom: -47px;
-        padding-top: 7px;
+        padding-top: 0;
         padding-left: 40px;
       }
 
@@ -168,9 +168,10 @@
         width: 284px;
 
         @include response-to(small) {
-          clip-path: polygon(0 0, 100% 0, 100% 141px, 0 100%) !important;
+          clip-path: polygon(0 0, 100% 0, 100% 144px, 0 100%) !important;
           background-image: url('../../img/sec-section-item1-bg-mob.png');
           background-position: right top;
+          height: 197px;
         }
       }
 
@@ -181,7 +182,7 @@
     }
 
     &.second {
-      padding: 3px 8px 19px 84px;
+      padding: 10px 8px 19px 84px;
       flex: 0 0 358px;
       clip-path: polygon(0 0, 100% 0, 326px 100%, 85px 100%);
       margin-right: -21px;
@@ -215,7 +216,7 @@
     }
 
     &.third {
-      padding: 3px 8px 19px 65px;
+      padding: 10px 8px 19px 65px;
       flex: 0 0 385px;
       clip-path: polygon(33px 0, 305px 0, 100% 100%, 0 100%);
       margin-right: -70px;
@@ -253,7 +254,7 @@
     }
 
     &.four {
-      padding: 3px 8px 19px 94px;
+      padding: 10px 8px 19px 94px;
       flex: 0 0 353px;
       clip-path: polygon(0 0, 100% 0, 100% 100%, 81px 100%);
 
@@ -291,7 +292,7 @@
     &_num {
       position: relative;
       z-index: 1;
-      font-size: 85px;
+      font-size: 60px;
       line-height: 1;
       color: #fff;
 
@@ -304,10 +305,10 @@
     &_caption {
       position: relative;
       z-index: 1;
-      font-size: 30px;
-      line-height: 41px;
+      font-size: 26px;
+      line-height: 36px;
       letter-spacing: 0.04em;
-      margin-top: -11px;
+      margin-top: -2px;
       color: $dark-blue;
 
       @media(max-width: 1240px) and (min-width: 767px) {

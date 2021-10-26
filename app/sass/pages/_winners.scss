@@ -113,6 +113,51 @@
     }
   }
 
+  &__btns {
+    @include flex-center();
+    margin-top: 28px;
+
+    @include response-to(small) {
+      margin-left: -8px;
+    }
+
+    &_item {
+      width: 273px;
+      @include flex-center();
+      margin: 0;
+      background-color: transparent;
+      border: none;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 51px;
+      color: #fff;
+      font-size: 14px;
+      line-height: 19px;
+      text-align: center;
+      font-family: inherit;
+      cursor: pointer;
+      
+      &.school {
+        background-image: url('../../img/winners-school-btn-bg.svg');
+
+        @include response-to(small) {
+          width: 204px;
+          background-image: url('../../img/winners-school-btn-bg-mob.svg');
+        }
+      }
+      
+      &.main-prize {
+        background-image: url('../../img/winners-main-prize-btn-bg.svg');
+
+        @include response-to(small) {
+          width: 151px;
+          background-image: url('../../img/winners-main-prize-btn-bg-mob.svg');
+        }
+      }
+    }
+  }
+
   &__table {
     padding-top: 10px;
     max-width: 657px;

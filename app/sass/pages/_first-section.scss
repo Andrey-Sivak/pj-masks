@@ -26,9 +26,9 @@
 
   &__logo-text-img {
     display: block;
-    margin-bottom: 25px;
+    margin-bottom: 19px;
     height: auto;
-    margin-left: 17px;
+    margin-left: 69px;
 
     @include response-to(large) {
       height: auto;
@@ -36,9 +36,9 @@
     }
 
     @include response-to(small) {
-      width: 274px;
+      width: 230px;
       transform: rotate(1.5deg);
-      margin: 10px auto -18px;
+      margin: -7px auto -24px;
       position: relative;
       z-index: 2;
     }
@@ -64,12 +64,12 @@
           content: '';
           position: absolute;
           background-color: #fff;
-          width: 150px;
+          width: 158px;
           height: 160px;
           z-index: 0;
           left: 50%;
           top: 50%;
-          transform: translate(-50%, -50%) skewY(-3deg);
+          transform: translate(-50%, -50%) skewY(-3deg) skewX(-3deg);
         }
 
         img {
@@ -101,19 +101,19 @@
         font-weight: bold;
         font-size: 16px;
         line-height: 20px;
-        margin-bottom: 5px;
       }
 
       &_text {
         font-size: 19px;
         line-height: 26px;
+        margin-bottom: 5px;
       }
     }
   }
 
   &__main-img {
     position: absolute;
-    bottom: -2px;
+    bottom: -22px;
     right: -29px;
 
     @include response-to(large) {
@@ -137,7 +137,9 @@
       }
 
       @include response-to(small) {
-        width: 341px;
+        width: 295px;
+        display: block;
+        margin: 0 auto;
       }
     }
 
@@ -161,7 +163,7 @@
         width: 618px;
         height: auto;
         left: -113px;
-        bottom: -252px;
+        bottom: -338px;
       }
     }
   }

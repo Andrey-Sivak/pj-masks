@@ -18,6 +18,19 @@
     }
   }
 
+  &[data-modal="sale-start"] {
+
+    .modal-window {
+      justify-content: flex-end;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .modal-caption {
+      margin-bottom: 0;
+    }
+  }
+
   &-window {
     width: 350px;
     min-height: 320px;

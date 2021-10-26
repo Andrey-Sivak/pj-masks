@@ -202,8 +202,8 @@
       <img src="./dist/img/img-logo-w-text.png"
            alt="img"
            loading="lazy"
-           width="498"
-           height="355"
+           width="335"
+           height="233"
            class="first-section__logo-text-img">
       <div class="qr">
         <div class="qr__img">
@@ -213,15 +213,15 @@
           <p class="qr__img_text">сканируйте <br>QR-код</p>
         </div>
         <div class="qr__text">
-          <p class="qr__text_date">С 01.11 по 30.11.2021 года</p>
           <p class="qr__text_text">Проходите обучение <br>с героями в масках <br>в дополненной реальности <br>и участвуйте в розыгрыше классных призов!</p>
+          <p class="qr__text_date">С 15.11 по 15.12.2021 года</p>
         </div>
       </div>
       <div class="first-section__main-img">
         <img src="./dist/img/main-img.png"
              alt="img"
-             width="787"
-             height="547"
+             width="723"
+             height="503"
              class="first-section__main-img_img">
         <img src="./dist/img/main-img-overlay.png"
              alt="img"
@@ -234,8 +234,11 @@
 
   <section class="second-section">
     <div class="second-section__mob-text">
-      <p class="second-section__mob-text_date">С 01.11 по 30.11.2021 года</p>
-      <p class="second-section__mob-text_text">Проходите обучение с героями в масках в дополненной реальности и участвуйте в розыгрыше классных призов!</p>
+      <p class="second-section__mob-text_date">С 15.11 по 15.12.2021 года</p>
+      <p class="second-section__mob-text_text">Проходите обучение с героями
+        <br>в масках в дополненной
+        <br>реальности и участвуйте в
+        <br>розыгрыше классных призов!</p>
       <a href="#" class="second-section__mob-text_btn">Играть</a>
     </div>
     <div class="container second-section__wrap">
@@ -358,11 +361,13 @@
 <footer class="footer">
   <div class="footer__wrap">
     <a href="#" class="footer__link">Политика конфиденциальности</a>
-    <p class="footer__text">Общий срок проведения акции: 01.11.21-31.12.21 г. Период совершения покупки игрушек с промо-стикером с 01.11.21-31.12.21 г.
-      <br>Информация об организаторе Акции, правилах её проведения, количестве призов, сроке, месте и порядке их получения на сайте <a href="https://promo-pjmasks.ru">https://promo-pjmasks.ru</a></p>
+    <p class="footer__text">Общий срок проведения акции: 15.11.21-15.02.21 г. Период совершения покупки игрушек с промо-стикером с 15.11.21-31.12.21 г.
+      <br>Период участия в розыгрыше призов с 15.11.21-15.12.21. Информация об организаторе Акции, правилах её проведения, количестве призов, сроке, месте и порядке их
+      <br>получения на сайте <a href="https://promo-pjmasks.ru">https://promo-pjmasks.ru</a></p>
   </div>
 </footer>
 
+<!-- вход -->
 <div class="modal" data-close="true" data-modal="enter">
   <div class="modal-window">
     <span class="modal-close" data-close="true"></span>
@@ -399,6 +404,7 @@
   </div>
 </div>
 
+<!-- регистрация -->
 <div class="modal" data-close="true" data-modal="registration"  >
   <div class="modal-window">
     <span class="modal-close" data-close="true"></span>
@@ -432,6 +438,7 @@
   </div>
 </div>
 
+<!-- восстановление пароля -->
 <div class="modal" data-close="true" data-modal="forgot-pass"  >
   <div class="modal-window">
     <span class="modal-close" data-close="true"></span>
@@ -451,15 +458,38 @@
 </div>
 
 <!-- Ваш пароль отправлен  на указанный e-mail -->
-
-<!--<div class="modal" data-close="true" data-modal="forgot-pass-sent">
+<div class="modal" data-close="true" data-modal="forgot-pass-sent">
   <div class="modal-window">
     <span class="modal-close" data-close="true"></span>
     <p class="modal-caption">ВХОД</p>
     <p class="modal-text">Ваш пароль отправлен <br>на указанный e-mail</p>
     <button class="modal-btn" data-close="true">Далее</button>
   </div>
-</div>-->
+</div>
+
+<!-- Как получить приз -->
+<div class="modal" data-close="true" data-modal="get-prize">
+  <div class="modal-window">
+    <span class="modal-close" data-close="true"></span>
+    <p class="modal-caption">Как получить <br>приз?</p>
+    <p class="modal-text">Ожидайте запроса информации
+      <br>на электронную почту, указанную
+      <br>при регистрации на сайте.
+      <br><br>Либо напишите нам
+      <br>на <a href="mailto:support@promo-pjmasks.ru">support@promo-pjmasks.ru</a>
+    </p>
+    <button class="modal-btn" data-close="true">Далее</button>
+  </div>
+</div>
+
+<!-- акция начнется 15.11 -->
+<div class="modal" data-close="true" data-modal="sale-start">
+  <div class="modal-window">
+    <span class="modal-close" data-close="true"></span>
+    <p class="modal-caption">АКЦИЯ НАЧНЕТСЯ <br>15.11</p>
+    <button class="modal-btn">понятно</button>
+  </div>
+</div>
 
 </body>
 </html>
