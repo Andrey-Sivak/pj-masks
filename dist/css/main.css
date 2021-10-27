@@ -2172,11 +2172,11 @@ input[type="number"] {
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
         font-size: 16px;
-        line-height: 20px; }
+        line-height: 20px;
+        margin-bottom: 5px; }
       .home .first-section .qr__text_text {
         font-size: 19px;
-        line-height: 26px;
-        margin-bottom: 5px; }
+        line-height: 26px; }
   .home .first-section__main-img {
     position: absolute;
     bottom: -22px;
@@ -3018,24 +3018,49 @@ input[type="number"] {
       line-height: 19px;
       text-align: center;
       font-family: inherit;
-      cursor: pointer; }
+      cursor: pointer;
+      position: relative; }
+      .winners__btns_item:before {
+        position: absolute;
+        content: '';
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat; }
+      .winners__btns_item:hover, .winners__btns_item:active, .winners__btns_item:focus {
+        background-image: none !important; }
+      .winners__btns_item.active {
+        background-image: none !important; }
       .winners__btns_item.school {
-        background-image: url("../img/winners-school-btn-bg.svg"); }
+        background-image: url("../img/winners-school-btn-bg-hover.svg"); }
+        .winners__btns_item.school:before {
+          background-image: url("../img/winners-school-btn-bg.svg"); }
         @media (max-width: 767px) {
           .winners__btns_item.school {
             width: 204px;
-            background-image: url("../img/winners-school-btn-bg-mob.svg"); } }
+            background-image: url("../img/winners-school-btn-bg-mob-hover.svg"); }
+            .winners__btns_item.school:before {
+              background-image: url("../img/winners-school-btn-bg-mob.svg"); } }
       .winners__btns_item.main-prize {
-        background-image: url("../img/winners-main-prize-btn-bg.svg"); }
+        background-image: url("../img/winners-main-prize-btn-bg-hover.svg"); }
+        .winners__btns_item.main-prize:before {
+          background-image: url("../img/winners-main-prize-btn-bg.svg"); }
         @media (max-width: 767px) {
           .winners__btns_item.main-prize {
             width: 151px;
-            background-image: url("../img/winners-main-prize-btn-bg-mob.svg"); } }
+            background-image: url("../img/winners-main-prize-btn-bg-mob-hover.svg"); }
+            .winners__btns_item.main-prize:before {
+              background-image: url("../img/winners-main-prize-btn-bg-mob.svg"); } }
   .winners__table {
-    padding-top: 10px;
     max-width: 657px;
     width: 100%;
     margin: 35px auto 0; }
+    .winners__table .scroll-wrapper > .scroll-content {
+      padding-top: 10px; }
     .winners__table_wrap {
       padding-right: 45px;
       max-height: 710px;

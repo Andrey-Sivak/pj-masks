@@ -137,32 +137,73 @@
       text-align: center;
       font-family: inherit;
       cursor: pointer;
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: '';
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      @include on-event {
+        background-image: none!important;
+      }
+
+      &.active {
+        background-image: none!important;
+      }
       
       &.school {
-        background-image: url('../../img/winners-school-btn-bg.svg');
+        background-image: url('../../img/winners-school-btn-bg-hover.svg');
+
+        &:before {
+          background-image: url('../../img/winners-school-btn-bg.svg');
+        }
 
         @include response-to(small) {
           width: 204px;
-          background-image: url('../../img/winners-school-btn-bg-mob.svg');
+          background-image: url('../../img/winners-school-btn-bg-mob-hover.svg');
+
+          &:before {
+            background-image: url('../../img/winners-school-btn-bg-mob.svg');
+          }
         }
       }
       
       &.main-prize {
-        background-image: url('../../img/winners-main-prize-btn-bg.svg');
+        background-image: url('../../img/winners-main-prize-btn-bg-hover.svg');
+
+        &:before {
+          background-image: url('../../img/winners-main-prize-btn-bg.svg');
+        }
 
         @include response-to(small) {
           width: 151px;
-          background-image: url('../../img/winners-main-prize-btn-bg-mob.svg');
+          background-image: url('../../img/winners-main-prize-btn-bg-mob-hover.svg');
+
+          &:before {
+            background-image: url('../../img/winners-main-prize-btn-bg-mob.svg');
+          }
         }
       }
     }
   }
 
   &__table {
-    padding-top: 10px;
     max-width: 657px;
     width: 100%;
     margin: 35px auto 0;
+
+    .scroll-wrapper > .scroll-content {
+      padding-top: 10px;
+    }
 
     &_wrap {
       padding-right: 45px;
