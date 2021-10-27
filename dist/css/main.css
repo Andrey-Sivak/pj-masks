@@ -3058,7 +3058,10 @@ input[type="number"] {
   .winners__table {
     max-width: 657px;
     width: 100%;
-    margin: 35px auto 0; }
+    margin: 35px auto 0;
+    display: none; }
+    .winners__table.active {
+      display: block; }
     .winners__table .scroll-wrapper > .scroll-content {
       padding-top: 10px; }
     .winners__table_wrap {

@@ -296,6 +296,39 @@ window.addEventListener('load', function () {
     (function scrollBar() {
         $('.winners__table_wrap').scrollbar();
     })();
+
+    (function winnersPrizes() {
+        if (!document.querySelector('.winners__btns')
+            || !document.querySelector('.winners__table')) {
+            return;
+        }
+
+        const buttons = [...document.querySelectorAll('.winners__btns_item')];
+        const tables = [...document.querySelectorAll('.winners__table')];
+
+        buttons.forEach(b => {
+            b.addEventListener('click', selectWinners);
+        });
+
+        function selectWinners(e) {
+            e.preventDefault();
+
+            if (this.classList.contains('active')) {
+                return;
+            }
+
+            document.querySelector('.winners__table.active')
+                .classList.remove('active');
+            document.querySelector('.winners__btns_item.active')
+                .classList.remove('active');
+
+            this.classList.add('active');
+            const dataTable = this.dataset.table;
+            const table = tables.filter(t => t.classList.contains(dataTable))[0];
+            console.log(table);
+            table.classList.add('active');
+        }
+    })();
 });
 
 function checkWidth() {
