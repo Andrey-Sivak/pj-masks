@@ -65,22 +65,22 @@
 
   &-form {
 
+    &__error {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+      display: block;
+      text-align: center;
+      line-height: 17px;
+      margin-bottom: 12px;
+      color: #F72A16;
+      z-index: 12;
+    }
+
     &-label  {
       width: 100%;
       margin-bottom: 10px;
       display: block;
-
-      span.error {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 500;
-        font-size: 12px;
-        display: block;
-        text-align: center;
-        line-height: 17px;
-        margin-bottom: 12px;
-        color: #F72A16;
-        z-index: 12;
-      }
 
       &.check {
         display: flex;
@@ -154,6 +154,7 @@
       font-weight: 500;
       font-size: 14px;
       line-height: 17px;
+      border: 2px solid #fff;
 
       &::placeholder {
         font-family: 'Montserrat', sans-serif;
@@ -161,6 +162,10 @@
         font-weight: 500;
         font-size: 14px;
         line-height: 17px;
+      }
+
+      &.error {
+        border: 2px solid #F72A16;
       }
     }
   }

@@ -1912,20 +1912,20 @@ input[type="number"] {
     text-transform: uppercase;
     color: #fff;
     margin-bottom: 42px; }
+  .modal-form__error {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    display: block;
+    text-align: center;
+    line-height: 17px;
+    margin-bottom: 12px;
+    color: #F72A16;
+    z-index: 12; }
   .modal-form-label {
     width: 100%;
     margin-bottom: 10px;
     display: block; }
-    .modal-form-label span.error {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 500;
-      font-size: 12px;
-      display: block;
-      text-align: center;
-      line-height: 17px;
-      margin-bottom: 12px;
-      color: #F72A16;
-      z-index: 12; }
     .modal-form-label.check {
       display: -webkit-box;
       display: -webkit-flex;
@@ -1983,7 +1983,8 @@ input[type="number"] {
     color: #1C0C44;
     font-weight: 500;
     font-size: 14px;
-    line-height: 17px; }
+    line-height: 17px;
+    border: 2px solid #fff; }
     .modal-form-input::-webkit-input-placeholder {
       font-family: 'Montserrat', sans-serif;
       color: #989898;
@@ -2014,6 +2015,8 @@ input[type="number"] {
       font-weight: 500;
       font-size: 14px;
       line-height: 17px; }
+    .modal-form-input.error {
+      border: 2px solid #F72A16; }
   .modal-text {
     margin-bottom: 25px;
     font-family: 'Montserrat', sans-serif;

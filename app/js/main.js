@@ -214,16 +214,7 @@ window.addEventListener('load', function () {
                 errorElement : 'span',
                 errorPlacement: function(error, element) {
                     var placement = $(element).data('error');
-                    if (placement) {
-                        $(placement).append(error);
-                    } else {
-                        error.insertBefore(element);
-                    }
                 },
-                messages: {
-                    phone: 'Некорректный номер',
-                    email: 'Некорректный e-mail'
-                }
             });
         });
 
