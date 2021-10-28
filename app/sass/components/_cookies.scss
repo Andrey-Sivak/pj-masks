@@ -1,0 +1,73 @@
+.cookies {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  background-color: rgba(#000, .8);
+  padding-top: 38px;
+  padding-bottom: 32px;
+  z-index: 1000;
+  bottom: 0;
+  opacity: 0;
+  @include transition-ease;
+
+  @include response-to(small) {
+    padding: 18px 18px 15px;
+  }
+
+  &.active {
+    opacity: 1;
+  }
+  
+  &__wrap {
+    margin: 0 auto;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 690px;
+    width: 100%;
+
+    @include response-to(small) {
+      flex-wrap: wrap;
+    }
+  }
+  
+  &__text {
+    max-width: 570px;
+    width: 100%;
+    margin-right: 15px;
+    font-size: 12px;
+    line-height: 14px;
+    font-family: 'Myriad Pro', sans-serif;
+
+    @include response-to(small) {
+      text-align: center;
+      margin-bottom: 11px;
+
+      br {
+        display: none;
+      }
+    }
+  }
+  
+  &__btn {
+    font-family: 'Myriad Pro', sans-serif;
+    border: 1px solid #FFF;
+    border-radius: 20px;
+    width: 85px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px 0 8px;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 14px;
+    text-transform: uppercase;
+
+    @include response-to(small) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

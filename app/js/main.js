@@ -330,6 +330,25 @@ window.addEventListener('load', function () {
             }, 150);
         }
     })();
+
+    (function cookies() {
+        if (!document.querySelector('.cookies')) {
+            return;
+        }
+
+        const cookiesElem = document.querySelector('.cookies');
+        const btn = document.querySelector('.cookies__btn');
+
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            cookiesElem.classList.remove('active');
+
+            setTimeout(() => {
+                cookiesElem.parentElement.removeChild(cookiesElem);
+            }, 300);
+        })
+    })();
 });
 
 function checkWidth() {
