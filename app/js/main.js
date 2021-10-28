@@ -317,16 +317,26 @@ window.addEventListener('load', function () {
                 return;
             }
 
+            const self = this;
+
             document.querySelector('.winners__table.active')
                 .classList.remove('active');
-            document.querySelector('.winners__btns_item.active')
-                .classList.remove('active');
+            setTimeout(() => {
+                document.querySelector('.winners__table.show')
+                    .classList.remove('show');
 
-            this.classList.add('active');
-            const dataTable = this.dataset.table;
-            const table = tables.filter(t => t.classList.contains(dataTable))[0];
-            console.log(table);
-            table.classList.add('active');
+                document.querySelector('.winners__btns_item.active')
+                    .classList.remove('active');
+
+                self.classList.add('active');
+                const dataTable = self.dataset.table;
+                const table = tables.filter(t => t.classList.contains(dataTable))[0];
+                table.classList.add('show');
+
+                setTimeout(() => {
+                    table.classList.add('active');
+                }, 150);
+            }, 150);
         }
     })();
 });

@@ -3036,34 +3036,41 @@ input[type="number"] {
       .winners__btns_item.active {
         background-image: none !important; }
       .winners__btns_item.school {
-        background-image: url("../img/winners-school-btn-bg-hover.svg"); }
+        background-image: url("../img/winners-school-btn-bg.svg"); }
         .winners__btns_item.school:before {
-          background-image: url("../img/winners-school-btn-bg.svg"); }
+          background-image: url("../img/winners-school-btn-bg-hover.svg"); }
         @media (max-width: 767px) {
           .winners__btns_item.school {
             width: 204px;
-            background-image: url("../img/winners-school-btn-bg-mob-hover.svg"); }
+            background-image: url("../img/winners-school-btn-bg-mob.svg"); }
             .winners__btns_item.school:before {
-              background-image: url("../img/winners-school-btn-bg-mob.svg"); } }
+              background-image: url("../img/winners-school-btn-bg-mob-hover.svg"); } }
       .winners__btns_item.main-prize {
-        background-image: url("../img/winners-main-prize-btn-bg-hover.svg"); }
+        background-image: url("../img/winners-main-prize-btn-bg.svg"); }
         .winners__btns_item.main-prize:before {
-          background-image: url("../img/winners-main-prize-btn-bg.svg"); }
+          background-image: url("../img/winners-main-prize-btn-bg-hover.svg"); }
         @media (max-width: 767px) {
           .winners__btns_item.main-prize {
             width: 151px;
-            background-image: url("../img/winners-main-prize-btn-bg-mob-hover.svg"); }
+            background-image: url("../img/winners-main-prize-btn-bg-mob.svg"); }
             .winners__btns_item.main-prize:before {
-              background-image: url("../img/winners-main-prize-btn-bg-mob.svg"); } }
+              background-image: url("../img/winners-main-prize-btn-bg-mob-hover.svg"); } }
   .winners__table {
     max-width: 657px;
     width: 100%;
     margin: 35px auto 0;
-    display: none; }
+    display: none;
+    -webkit-transition: all ease .15s;
+    transition: all ease .15s;
+    opacity: 0; }
     .winners__table.active {
+      opacity: 1; }
+    .winners__table.show {
       display: block; }
     .winners__table .scroll-wrapper > .scroll-content {
       padding-top: 10px; }
+    .winners__table_wrapper {
+      min-height: 710px; }
     .winners__table_wrap {
       padding-right: 45px;
       max-height: 710px;

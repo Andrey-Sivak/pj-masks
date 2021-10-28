@@ -161,35 +161,35 @@
       }
       
       &.school {
-        background-image: url('../../img/winners-school-btn-bg-hover.svg');
+        background-image: url('../../img/winners-school-btn-bg.svg');
 
         &:before {
-          background-image: url('../../img/winners-school-btn-bg.svg');
+          background-image: url('../../img/winners-school-btn-bg-hover.svg');
         }
 
         @include response-to(small) {
           width: 204px;
-          background-image: url('../../img/winners-school-btn-bg-mob-hover.svg');
+          background-image: url('../../img/winners-school-btn-bg-mob.svg');
 
           &:before {
-            background-image: url('../../img/winners-school-btn-bg-mob.svg');
+            background-image: url('../../img/winners-school-btn-bg-mob-hover.svg');
           }
         }
       }
       
       &.main-prize {
-        background-image: url('../../img/winners-main-prize-btn-bg-hover.svg');
+        background-image: url('../../img/winners-main-prize-btn-bg.svg');
 
         &:before {
-          background-image: url('../../img/winners-main-prize-btn-bg.svg');
+          background-image: url('../../img/winners-main-prize-btn-bg-hover.svg');
         }
 
         @include response-to(small) {
           width: 151px;
-          background-image: url('../../img/winners-main-prize-btn-bg-mob-hover.svg');
+          background-image: url('../../img/winners-main-prize-btn-bg-mob.svg');
 
           &:before {
-            background-image: url('../../img/winners-main-prize-btn-bg-mob.svg');
+            background-image: url('../../img/winners-main-prize-btn-bg-mob-hover.svg');
           }
         }
       }
@@ -201,13 +201,23 @@
     width: 100%;
     margin: 35px auto 0;
     display: none;
+    transition: all ease .15s;
+    opacity: 0;
 
     &.active {
+      opacity: 1;
+    }
+
+    &.show {
       display: block;
     }
 
     .scroll-wrapper > .scroll-content {
       padding-top: 10px;
+    }
+
+    &_wrapper {
+      min-height: 710px;
     }
 
     &_wrap {
