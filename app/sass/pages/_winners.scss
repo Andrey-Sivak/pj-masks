@@ -4,12 +4,40 @@
   background-size: cover;
   padding-top: 81px;
   padding-bottom: 67px;
+  min-height: calc(100vh - 268px);
 
   @include response-to(small) {
     padding-top: 54px;
     padding-right: 4px;
     padding-left: 15px;
 
+  }
+
+  &__empty {
+    margin-top: 72px;
+    text-align: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+
+    &_text {
+      margin-top: 6px;
+      color: $dark-blue;
+      font-size: 20px;
+      line-height: 27px;
+
+      @include response-to(small) {
+        margin-top: 20px;
+      }
+
+      br.mob {
+        display: none;
+
+        @include response-to(small) {
+          display: block;
+        }
+      }
+    }
   }
 
   &__page-caption {

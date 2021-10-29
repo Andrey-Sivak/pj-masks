@@ -2917,12 +2917,34 @@ input[type="number"] {
   background-image: url("../img/winners-bg.png");
   background-size: cover;
   padding-top: 81px;
-  padding-bottom: 67px; }
+  padding-bottom: 67px;
+  min-height: calc(100vh - 268px); }
   @media (max-width: 767px) {
     .winners {
       padding-top: 54px;
       padding-right: 4px;
       padding-left: 15px; } }
+  .winners__empty {
+    margin-top: 72px;
+    text-align: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto; }
+    .winners__empty_text {
+      margin-top: 6px;
+      color: #1C0C44;
+      font-size: 20px;
+      line-height: 27px; }
+      @media (max-width: 767px) {
+        .winners__empty_text {
+          margin-top: 20px; } }
+      .winners__empty_text br.mob {
+        display: none; }
+        @media (max-width: 767px) {
+          .winners__empty_text br.mob {
+            display: block; } }
   .winners__page-caption {
     color: #1C0C44;
     font-size: 36px;
