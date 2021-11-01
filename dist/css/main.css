@@ -3645,7 +3645,9 @@ input[type="number"] {
     .faq .question.active .question__text {
       margin-top: 20px;
       overflow: visible;
-      max-height: 400px; }
+      max-height: -webkit-max-content;
+      max-height: -moz-max-content;
+      max-height: max-content; }
     .faq .question__header {
       font-size: 16px;
       line-height: 22px;
