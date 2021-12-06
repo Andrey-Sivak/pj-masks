@@ -250,6 +250,31 @@
         z-index: 1;
       }
     }
+
+    &__qr {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 26px;
+
+      @include response-to(small) {
+        display: none;
+      }
+
+      &_text {
+        color: $dark-blue;
+        width: 117px;
+        margin-left: 25px;
+      }
+    }
+
+    & .account__btn {
+      display: none;
+
+      @include response-to(small) {
+        display: block;
+      }
+    }
   }
 
   &__btn {

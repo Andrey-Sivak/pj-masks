@@ -4159,6 +4159,32 @@ input[type="number"] {
     .account .process__heroes_red {
       right: 0;
       z-index: 1; }
+  .account .process__qr {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 26px; }
+    @media (max-width: 767px) {
+      .account .process__qr {
+        display: none; } }
+    .account .process__qr_text {
+      color: #1C0C44;
+      width: 117px;
+      margin-left: 25px; }
+  .account .process .account__btn {
+    display: none; }
+    @media (max-width: 767px) {
+      .account .process .account__btn {
+        display: block; } }
   .account__btn {
     cursor: pointer;
     border: none;
