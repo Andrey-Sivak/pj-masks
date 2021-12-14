@@ -58,7 +58,6 @@
   &__item {
 
     &.wb {
-      background: linear-gradient(180deg, #A82C9E 0%, #9A2896 100%);
       border-radius: 10px;
       @include flex-center();
       width: 299px;
